@@ -1,71 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Dashboard</title>
-        <!-- Styles -->
-        <link href="plugin/bootstrap/bootstrap.css" rel="stylesheet" />
-        <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.18.2/dist/bootstrap-table.min.css">
-        <link href="CSS/subscribers.css" rel="stylesheet" />
-        <link href="CSS/responsive.css" rel="stylesheet" />
-    </head>
-    <body class="sidebar-fixed">
-        <div id="containerMain">
-            <div id="containerMain_content">
-                <main>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Dashboard</title>
+    <!-- Styles -->
+    <link href="plugin/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.18.2/dist/bootstrap-table.min.css">
+    <link href="CSS/styles.css" rel="stylesheet" />
+    <link href="CSS/responsive.css" rel="stylesheet" />
+    <link href="CSS/subscribers.css" rel="stylesheet" />
+</head>
+<body class="sidebar-fixed">
+    <div id="containerMain">
+        <div id="containerMain_content" class="p-0 m-auto">
+            <main>
                 <!-- Page Content -->
-                    <section class="container-fluid">
-                        <div class="card m-auto w-75">
-                            <nav class="navbar navbar-light bg-light border-bottom">
-                                <span class="navbar-brand mb-0 h1 text-center">Subscribers</span>
-                            </nav>
-                            <div class="card-body">
-                                <h5>
-                                    step 1:
-                                    <small class="text-muted">Select</small>
-                                </h5>
-                                <div class="container pb-1">
-                                    <div class="row">
-                                        <div class="col-5">
-                                            <h6>Address Book:</h6>
-                                            <select class="form-control" aria-label="Default select example">
-                                                <option selected>Select All</option>
-                                                <option value="1">One</option>
-                                                <option value="2">Two</option>
-                                                <option value="3">Three</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-5">
-                                            <h6>Search:</h6>
-                                            <div class="input-group">
-                                                <input class="form-control" type="text" placeholder="Search..." aria-label="Search" />
-                                                <div class="input-group-append">
-                                                    <button class="btn btn-outline-secondary">
-                                                        <i class="fas fa-search"></i>
-                                                    </button>
-                                                </div>
+                <section class="container-fluid">
+                    <div class="bg-light">
+                        <nav class="navbar  d-flex justify-content-center navbar-light bg-light border-bottom">
+                            <span class="navbar-brand mb-0 h1 text-center">Subscribers</span>
+                        </nav>
+                        <div class="pt-4">
+                            <!-- step 1 section -->
+                            <h5 class="mb-3">
+                                step 1:
+                                <small class="text-muted">Select</small>
+                            </h5>
+                            <div class="pb-1">
+                                <div class="row">
+                                    <div class="col-12 col-lg-5 col-md-4">
+                                        <h6>Address Book:</h6>
+                                        <select class="form-control rounded-0" aria-label="Default select example">
+                                            <option selected>Select All</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 col-lg-5 col-md-4">
+                                        <h6>Search:</h6>
+                                        <div class="input-group">
+                                            <input class="form-control border-right-0 rounded-0" type="text" placeholder="Search..."
+                                                aria-label="Search" />
+                                            <div class="input-group-append">
+                                                <button class="btn btn-outline-secondary border-left-0 color-border rounded-0">
+                                                    <i class="fas fa-search"></i>
+                                                </button>
                                             </div>
                                         </div>
-                                        <div class="col-2 d-flex justify-content-end align-items-end">
-                                            <a href="javascript:void(0)" id="selectallSelect">Select All</a>
-                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-2 col-md-4 d-flex justify-content-end align-items-end">
+                                        <a href="javascript:void(0)" id="selectallSelect" class="text-green">
+                                            Select All</a>
                                     </div>
                                 </div>
-                                <table 
-                                data-click-to-select="true"
-                                class="table table-main selectTable">
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-main selectTable">
                                     <tbody>
                                         <tr>
                                             <th scope="row">1</th>
                                             <td>accountsupport@zoominfo.com</td>
                                             <td class="text-green text-fontsize">Add this address</td>
-                                            <td>
+                                            <td class="text-right">
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="1" id="addAddress1">
+                                                    <input class="form-check-input" type="checkbox" value="1"
+                                                        id="addAddress1">
                                                 </div>
                                             </td>
                                         </tr>
@@ -73,9 +78,10 @@
                                             <th scope="row">1</th>
                                             <td>accountsupport@zoominfo.com</td>
                                             <td class="text-green text-fontsize">Add this address</td>
-                                            <td>
+                                            <td class="text-right">
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="2" id="addAddress2">
+                                                    <input class="form-check-input" type="checkbox" value="2"
+                                                        id="addAddress2">
                                                 </div>
                                             </td>
                                         </tr>
@@ -83,33 +89,99 @@
                                             <th scope="row">1</th>
                                             <td>accountsupport@zoominfo.com</td>
                                             <td class="text-green text-fontsize">Add this address</td>
-                                            <td>
+                                            <td class="text-right">
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="3" id="addAddress3">
+                                                    <input class="form-check-input" type="checkbox" value="3"
+                                                        id="addAddress3">
                                                 </div>
                                             </td>
                                         </tr>
                                     </tbody>
                                 </table>
-                                <select class="form-control select-address w-25 m-auto" aria-label="Default select example">
-                                    <option selected>Add All Selected Address</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                </select>
+                            </div>    
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="width-240 btn btn-success text-uppercase position-relative pr-2 rounded-0 px-4 mb-5">
+                                    All Selected Address
+                                    <i class="bt-arrow fa fa-angle-down position-absolute text-green" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                            <!--  step 1 section end -->
+
+                            <!--  step 2 section -->
+                                <div class="border-top pt-4">
+                                    <h5 class="mb-3">
+                                        step 2:
+                                        <small class="text-muted">Confirm</small>
+                                    </h5>
+                                    <div class="col-md-12 d-flex justify-content-end align-items-end pr-0">
+                                        <a href="javascript:void(1)" id="selectremoveSelect" class="text-green">Select All</a>
+                                        <a href="javascript:void(2)" id="selectremoveDeselect" class="text-green ml-4">Deselect All</a>
+                                    </div>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-main selectremoveTable borderlessTable">
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>accountsupport@zoominfo.com</td>
+                                                <td class="text-green text-fontsize">Add this address</td>
+                                                <td class="text-right">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="1"
+                                                            id="addAddress1">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>accountsupport@zoominfo.com</td>
+                                                <td class="text-green text-fontsize">Add this address</td>
+                                                <td class="text-right">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="2"
+                                                            id="addAddress2">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>accountsupport@zoominfo.com</td>
+                                                <td class="text-green text-fontsize">Add this address</td>
+                                                <td class="text-right">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="3"
+                                                            id="addAddress3">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="d-flex justify-content-center pb-4">
+                                    <button type="button" class="width-240 btn btn-warning text-uppercase position-relative rounded-0">
+                                        Remove All Selected Address
+                                        <i class="fa fa-angle-up position-absolute redbt-arrow text-red" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                                <!--  step 2 section end -->
+
+                                <div class="d-flex justify-content-center pt-2">
+                                    <button type="button" class="btn btn-light text-uppercase text-green border rounded-0 ok-wh">OK</button>
+                                </div>
                             </div>
                         </div>
-                    </section>
-                    <!-- Page Content End-->
-                </main>  
-            </div>
+                </section>
+                <!-- Page Content End-->
+            </main>
         </div>
-        <!-- Scritps -->
-        <script src="plugin/jQuery/jquery-3.6.0.slim.min.js"></script>
-        <script src="plugin/fontawesome/all.min.js"></script>
-        <script src="plugin/bootstrap/bootstrap.js"></script>
-        <script src="https://unpkg.com/bootstrap-table@1.18.2/dist/bootstrap-table.min.js"></script>
-        <script src="js/common.js"></script>
-        <script src="js/subscribers.js"></script>
-    </body>
+    </div>
+    <!-- Scritps -->
+    <script src="plugin/jQuery/jquery-3.6.0.slim.min.js"></script>
+    <script src="plugin/fontawesome/all.min.js"></script>
+    <script src="plugin/bootstrap/bootstrap.js"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.18.2/dist/bootstrap-table.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/subscribers.js"></script>
+</body>
+
 </html>

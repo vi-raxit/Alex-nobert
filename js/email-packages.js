@@ -27,7 +27,24 @@ var $table = $('#b-table');
 });
 
 
-$('.input-daterange').datepicker({
+$('#expiration-date').datepicker({
+    multidate: true,
+    format: 'dd-mm-yyyy',
+    autoclose: true,
+    calendarWeeks : true,
+    clearBtn: true,
+    disableTouchKeyboard: true
+});
+$('#delivery-date').datepicker({
+    multidate: true,
+    format: 'dd-mm-yyyy',
+    autoclose: true,
+    calendarWeeks : true,
+    clearBtn: true,
+    disableTouchKeyboard: true
+});
+$('#expiry-date').datepicker({
+    multidate: true,
     format: 'dd-mm-yyyy',
     autoclose: true,
     calendarWeeks : true,

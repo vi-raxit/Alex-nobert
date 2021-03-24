@@ -2,6 +2,7 @@
 * Email Packages Style
 */
 .search-package-left {
+  min-height: 500px;
   padding-top: 15px;
   padding-left: 0;
   padding-right: 0;
@@ -36,7 +37,9 @@
   margin-top: -0.4rem;
   margin-left: -0.4rem;
 }
-
+.text-dark-grey {
+  color: #A6A6A6;  
+}
 /* package-left-table */
 .package-left-table .table td {
   border: none;
@@ -61,12 +64,27 @@
   background-color: #ECEEF3;
 }
 .package-left-table .form-check {
-  /* padding-left: 15px; */
+  padding-left: 15px;
 }
 .package-left-table .form-check-input {
   margin-top: -0.3rem;
   margin-left: -0.6rem;
   z-index: 10;
+}
+@media (max-width: 420px) {
+  .package-left-table .form-check-input {
+    margin-left: -0.4rem;
+  }
+}
+@media only screen and (min-width: 425px) and (max-width: 767px)  {
+  .package-left-table .form-check-input {
+    margin-left: -0.5rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+  .package-left-table .form-check-input {
+    margin-left: -0.7rem;
+  }
 }
 
 .filledBox {
@@ -139,12 +157,12 @@ button:focus {
   padding: 0 !important
 }
 @media (min-width: 768px) {
-  .datepicker-dropdown {
+  /* .datepicker-dropdown {
     top: 180px !important;
     left: calc(50% - 455px) !important;
     border-right: #222f48;
     border-left: #222f48
-  }
+  } */
 }
 .datepicker-dropdown.datepicker-orient-left:before {
   left: calc(50% - 6px) !important

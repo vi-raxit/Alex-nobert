@@ -1,50 +1,42 @@
-  /*!
+/*
 * Subscribers Style
 */
-
-/* Roboto Fonts */
-@font-face {
-  font-family: "Roboto";
-  src: url(../fonts/roboto/Roboto-Regular.ttf);
-}
-
-@font-face {
-  font-family: "fontawesome";
-  src: url(../fonts/fontawesome-free-5.15.2-web//webfonts/fa-regular-400.ttf);
-}
-
-html,
-body {
-  font-family: "Roboto";
-  font-weight: 400;
-  height: 100%;
-  background-color: #edeff3;
-}
-
-.container,
-.container-fluid,
-.container-sm,
-.container-md,
-.container-lg,
-.container-xl {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-.text-fontsize
-{
+.text-fontsize {
   font-size: 14px;
 }
 .text-green{
-  color: #4d894d;
+  color:  #5E9331;
 }
-.select-address
-{
-  border-radius: 0px;
-    color: white;
-    background: #5E9331;
-}
-.table-main
-{
+.table-main {
   background: #F2F4F8;
 }
-/* Data tables style end*/
+.btn-red {
+  border-radius: 0px;
+  color: white;
+  background: #BA0D0D;
+}
+.ok-wh {
+  width: 59px;
+  height: 48px;
+}
+.bt-arrow {
+  top: 9px;
+  right: 10px;
+}
+.redbt-arrow {
+  top: 9px;
+  right: 5px;
+}
+.width-240 {
+  min-width: 240px;
+}
+.text-red {
+  color: #E11010; ;
+}
+.text-green {
+  color: #72B33A; ;
+}
+.color-border {
+  border-color:#ced4da ;
+  color:#E0E0E0;
+}

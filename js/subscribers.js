@@ -31,4 +31,21 @@ jQuery( document ).ready(function($) {
       $("#selectallSelect").text("Select All");
     }
   });
+
+  var $selectRemove = $('#selectremoveSelect')
+  $selectRemove.click(function () {
+    $(this).text("Select All");
+    $(".selectremoveTable input.form-check-input").each(function (index, item) {
+      item.checked = true;
+    });
+  });
+
+  var $deselectRemove = $('#selectremoveDeselect')
+  $deselectRemove.click(function () {
+    $(this).text("Deselect All");
+    $(".selectremoveTable input.form-check-input").each(function (index, item) {
+      item.checked = false;
+    });
+  });
+
 });
