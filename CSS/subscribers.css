@@ -1,0 +1,50 @@
+  /*!
+* Subscribers Style
+*/
+
+/* Roboto Fonts */
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: "fontawesome";
+  src: url(../fonts/fontawesome-free-5.15.2-web//webfonts/fa-regular-400.ttf);
+}
+
+html,
+body {
+  font-family: "Roboto";
+  font-weight: 400;
+  height: 100%;
+  background-color: #edeff3;
+}
+
+.container,
+.container-fluid,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.text-fontsize
+{
+  font-size: 14px;
+}
+.text-green{
+  color: #4d894d;
+}
+.select-address
+{
+  border-radius: 0px;
+    color: white;
+    background: #5E9331;
+}
+.table-main
+{
+  background: #F2F4F8;
+}
+/* Data tables style end*/
