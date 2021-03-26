@@ -1,7 +1,9 @@
 /*
 * Activity Log Style
 */
-
+.fixed-table-toolbar .bs-bars #toolbar select {
+  width: 100px;
+}
 /* Data tables style*/
 .dataTables_wrapper .dataTables_length,
 .dataTables_wrapper .dataTables_filter,
@@ -16,50 +18,36 @@
   display: flex;
   justify-content: space-between;
 }
-.fixed-table-toolbar .bs-bars #toolbar select {
-  width: 100px;
-}
-.table.borderlessTable td,.table.borderlessTable th{
-  border-right: 0;
-  border-left: 0;
-}
-/* circle Icon Style */
-.circle-icon{
+.circle-icon {
   color: #4D8943;
   font-size: 8px;
 }
-/* User Icon Style */
 .user-icon{
   color: #556b98;
   font-size: 15px;
 }
-.text-green{
+.text-green {
   color: #4D8943;
 }
-.text-red
-{
+.text-red {
   color: #BA0D0D;
 }
-.span-progress{
+.span-progress {
   float: left;
   margin-right:5px;
 }
-.width-progress
-{
+.width-progress {
   width: 145px;
   margin: 0px;
   height: 10px;
 }
-.header-bg
-{
+.header-bg {
   background:#F0F0F0;
 }
-.select-main
-{
+.select-main {
   width: 120px !important;
 }
-.text-15
-{
+.text-15 {
   font-size: 15px;
 }
 .dropdown-menu.show {

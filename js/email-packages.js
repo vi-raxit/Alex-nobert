@@ -1,4 +1,4 @@
-//exporte les données sélectionnées
+/* Email Packages Javascript */
 var $table = $('#b-table');
     $(function () {
         

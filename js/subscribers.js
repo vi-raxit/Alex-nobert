@@ -1,4 +1,4 @@
-/* Text packages Javascript */
+/* Subscribers Javascript */
 jQuery( document ).ready(function($) {
     /* Select and Deselect All */
     var $selectAll = $('#selectallSelect')

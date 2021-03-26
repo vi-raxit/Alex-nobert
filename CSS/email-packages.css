@@ -2,13 +2,18 @@
 * Email Packages Style
 */
 .search-package-left {
-  min-height: 500px;
   padding-top: 15px;
   padding-left: 0;
   padding-right: 0;
 }
+@media (min-width: 1024px) {
+  .search-package-left {
+    min-height: 500px;
+  }
+}
+
 .search-package-right {
-  padding-top: 15px;
+  padding-top: 30px;
 }
 .pl-15 {
  padding-left: 15px !important;
@@ -20,8 +25,6 @@
 .borderless-list .list-group-item:first-child {
   border: none;
   padding: 0;
-  /* padding-left: 0;
-  padding-right: 0; */
   display: flex;
   justify-content: flex-start;
 }
@@ -286,4 +289,16 @@ tfoot tr:nth-child(2) th {
   .datepicker-dropdown.datepicker-orient-right:after {
       right: calc(50% - 5px)
   }
+}
+.color-border {
+  border-color:#ced4da ;
+  color:#E0E0E0;
+  background: white;
+}
+.list-group-item {
+  border: 0px;
+  background: none;
+}
+.font-color{
+color: #A6A6A6;
 }

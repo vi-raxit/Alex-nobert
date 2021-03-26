@@ -2,7 +2,10 @@
 * Prospectivity Style
 */
 .w-145{
-    width: 160px;
+    min-width: 160px;
+}
+.w-300{
+    min-width: 300px;
 }
 .pad-42
 {

@@ -1,0 +1,48 @@
+/*
+* Import Contacts Style
+*/
+.fileUplaod-container {
+  color: #A6A6A6;
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+}
+.dropZone {
+  width: 100%;
+  height: 120px;
+  background: #ffffff;
+  border: 1px solid #E0E0E0;
+  border-style: dashed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#basic_message {
+  /* height: 200px;
+  overflow-y: scroll; */
+}
+.simple-upload-dragover {
+  background-color: #eef;
+}
+.simple-upload-filename {
+  margin-right: 0.5em;
+}
+.custom-file-upload {
+  border: 1px solid #E0E0E0;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+.fileUpload-label {
+  display: inline-block;
+  background-color: #FFFFFF;
+  color: #5E9331;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 1px solid #E0E0E0;
+}
+.w-150 {
+  min-width: 150px;
+}
+.w-250 {
+  width: 250px;
+}
