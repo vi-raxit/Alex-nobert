@@ -1,0 +1,14 @@
+/*
+* Tasks Style
+*/
+
+.toolbar-left {
+  float: left;
+}
+@media (min-width: 1024px) {
+  .toolbar-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+  }
+}

@@ -1,3 +1,4 @@
+/* Prospecting Javascript */
 jQuery( document ).ready(function($) {
        // checkbox select all or cancel
     $("input.select-all").click(function () {
@@ -20,4 +21,4 @@ jQuery( document ).ready(function($) {
         var len = $("input.select-item:checked:checked").length;
         all.checked = len===total;
     }
-    });
+});

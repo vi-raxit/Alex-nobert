@@ -9,10 +9,10 @@
         <title>Dashboard</title>
         <!-- Styles -->
         <link href="plugin/bootstrap/bootstrap.css" rel="stylesheet" />
-        <link href="plugin/bootstrap-table/bootstrap-table.min.css" rel="stylesheet" >
+        <link href="plugin/bootstrap-table/bootstrap-table.min.css" rel="stylesheet" />
         <link href="CSS/styles.css" rel="stylesheet" />
         <link href="CSS/responsive.css" rel="stylesheet" />
-        <link href="CSS/import-contacts.css" rel="stylesheet" />
+        <link href="CSS/history.css" rel="stylesheet" />
     </head>
     <body class="sidebar-fixed">
         <div id="containerMain">
@@ -180,26 +180,13 @@
                     <!-- Mobile Top Nav End-->
                     <nav class="sidebar-topnav shadow-sm navbar navbar-expand navbar-light box-shadow bg-light">
                         <!-- Breadcrumb-->
+                        <span class="pl-2 pr-2">
+                            <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.589996 10.58L5.17 6L0.589996 1.41L2 0L8 6L2 12L0.589996 10.58Z" fill="black"/>
+                            </svg>
+                        </span>
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html"></a>Address Book</a></li>
-                            <span class="pl-2 pr-2">
-                                <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M0.589996 10.58L5.17 6L0.589996 1.41L2 0L8 6L2 12L0.589996 10.58Z" fill="black"/>
-                                </svg>
-                            </span>
-                            <li class="breadcrumb-item active">Admin Leads</li>
-                            <span class="pl-2 pr-2">
-                                <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M0.589996 10.58L5.17 6L0.589996 1.41L2 0L8 6L2 12L0.589996 10.58Z" fill="black"/>
-                                </svg>
-                            </span>
-                            <li class="breadcrumb-item active">Manage</li>
-                            <span class="pl-2 pr-2">
-                                <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M0.589996 10.58L5.17 6L0.589996 1.41L2 0L8 6L2 12L0.589996 10.58Z" fill="black"/>
-                                </svg>
-                            </span>
-                            <li class="breadcrumb-item active">Import</li>
+                            <li class="breadcrumb-item"><a href="index.html"></a>History</a></li>
                         </ol>
                     
                         <!-- Navbar Search-->
@@ -218,114 +205,140 @@
                 <main class="pt-4 pb-4">
                     <!-- Page Content -->
                     <section class="container-fluid">
-                        <!-- File Drop/Upload -->
-                        <div class="fileUplaod-container">
-                            <div id="basic_drop_zone" class="dropZone">
-                                <div class="d-flex justify-content-center">
-                                    <svg width="25" height="29" viewBox="0 0 25 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M22.5 22.5V26.5H2.5V22.5H0.5V26.5C0.5 27.0304 0.710714 27.5391 1.08579 27.9142C1.46086 28.2893 1.96957 28.5 2.5 28.5H22.5C23.0304 28.5 23.5391 28.2893 23.9142 27.9142C24.2893 27.5391 24.5 27.0304 24.5 26.5V22.5H22.5Z" fill="#E0E0E0"/>
-                                        <path d="M22.5 12.5L21.09 11.09L13.5 18.67V0.5H11.5V18.67L3.91 11.09L2.5 12.5L12.5 22.5L22.5 12.5Z" fill="#E0E0E0"/>
-                                    </svg>
-                                    <span class="ml-2 dropBox">Drop your CSV or XLS here</span>
-                                    <div id="basic_message"></div>
-                                    <div id="basic_progress"></div>
-                                </div>
-                            </div>
-                            <span class="d-flex justify-content-center mt-4 mb-4">Or</span>
-                            <div class="d-flex justify-content-center mb-2">
-                                <input type="file" multiple="true" id="fileUpload" hidden accept=".xlsx, .xls, .csv"/>
-                                <label class="fileUpload-label btn-action" for="fileUpload">Browse</label>
-                            </div>
-                        </div>
-                        <!-- File Drop/Upload End -->
-                        <div class="mb-4">
-                            <div class="toolbarImportContacts">
-                                <select class="form-control w-auto rounded-0 mb-1">
-                                    <option value="" disabled selected>Select Saved Mapping</option>
-                                    <option value="mapping-2">Mapping-1</option>
-                                    <option value="mapping-2">Mapping-2</option>
-                                    <option value="mapping-2">Mapping-3</option>
-                                </select>
-                            </div>
-                            <table id="b-table" 
-                                    data-toggle="table"
-                                    data-toolbar="#toolbar"
-                                    class="table borderlessTable table-striped content-tb-spacing">
+                        <div class="card">
+                            <table
+                             id="b-table" 
+                             data-toggle="table" 
+                             data-filter-control="true" 
+                             data-show-export="true"
+                             data-show-search-clear-button="true" 
+                             class="table borderlessTable">
                                 <thead>
-                                    <tr>
-                                        <th class="w-150" data-field="columnHeader">COLUMN HEADER</th>
-                                        <th class="w-150" data-field="columnValue">COLUMN VALUE</th>
-                                        <th class="w-150" data-field="columnSelect">MAP TO</th>
+                                    <tr class="text-fontsize">
+                                        <th class="w-180" data-field="name" data-sortable="true" data-filter-control="input">Name</th>
+                                        <th class="w-185" data-field="sent" data-sortable="true" data-filter-control="select">Sent To</th>
+                                        <th class="w-170" data-field="date" data-sortable="true" data-filter-control="select">Date Sent</th>
+                                        <th class="w-170" data-field="expiration" data-sortable="true" data-filter-control="select">Expiration</th>
+                                        <th class="w-170" data-field="status">Status</th>
+                                        <th class="w-45" data-field="checkbox">
+                                            <input type="checkbox" class="select-all checkbox" name="select-all" />
+                                        </th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody class="text-15">
                                     <tr>
-                                        <td>Skyfall - Adele</td>
-                                        <td>Details</td>
                                         <td>
-                                            <select class="form-control w-100 rounded-0 m-0 p-0">
-                                                <option value="" disabled selected>Select Field</option>
-                                                <option value="field-1">Field-1</option>
-                                                <option value="field-2">Field-2</option>
-                                                <option value="field-3">Field-3</option>
-                                            </select>
+                                            <span class="mr-2"><img src="image/icons/box-datatable.png" alt="box" /></span>
+                                            <span class="mr-2">Skyfall</span>
+                                            <span class="ml-1"><img src="image/icons/view-datatable.png" alt="view" /></span>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="display-grid">
+                                                    <span>Alex Norbort</span>
+                                                    <span>(alex2norbert@gmail.com)</span>
+                                                </div>
+                                                <div class="p-3 d-flex">
+                                                    <span><img src="image/icons/message-datatable.png" alt="message" /></span>
+                                                    <span class="ml-2"><img src="image/icons/right-arrow-datatable.png" alt="right" /></span>
+                                                    <span class="ml-2"><img src="image/icons/view-datatable.png" alt="view" /></span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>3/12/2021</div>
+                                            <div>11:38 AM</div>
+                                        </td>
+                                        <td>
+                                            <div class=" align-items-center">
+                                                <span>Never Expires </span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <span class="span-progress">Sent | Resend</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" class="select-item checkbox" name="select-item" value="1000" />
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>Skyfall - Adele</td>
-                                        <td>Details</td>
                                         <td>
-                                            <select class="form-control w-100 rounded-0 m-0 p-0">
-                                                <option value="" disabled selected>Select Field</option>
-                                                <option value="field-1">Field-1</option>
-                                                <option value="field-2">Field-2</option>
-                                                <option value="field-3">Field-3</option>
-                                            </select>
+                                            <span class="mr-2"><img src="image/icons/box-datatable.png" alt="box" /></span>
+                                            <span class="mr-2">Skyfall</span>
+                                            <span class="ml-1"><img src="image/icons/view-datatable.png" alt="view" /></span>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="display-grid">
+                                                    <span>Alex Norbort</span>
+                                                    <span>(alex2norbert@gmail.com)</span>
+                                                </div>
+                                                <div class="p-3 d-flex">
+                                                    <span><img src="image/icons/message-datatable.png" alt="message" /></span>
+                                                    <span class="ml-2"><img src="image/icons/right-arrow-datatable.png" alt="right" /></span>
+                                                    <span class="ml-2"><img src="image/icons/view-datatable.png" alt="view" /></span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>3/12/2021</div>
+                                            <div>11:38 AM</div>
+                                        </td>
+                                        <td>
+                                            <div class=" align-items-center">
+                                                <span>Never Expires </span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <span class="span-progress">Sent | Resend</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" class="select-item checkbox" name="select-item" value="1000" />
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>Skyfall - Adele</td>
-                                        <td>Details</td>
                                         <td>
-                                            <select class="form-control w-100 rounded-0 m-0 p-0">
-                                                <option value="" disabled selected>Select Field</option>
-                                                <option value="field-1">Field-1</option>
-                                                <option value="field-2">Field-2</option>
-                                                <option value="field-3">Field-3</option>
-                                            </select>
+                                            <span class="mr-2"><img src="image/icons/box-datatable.png" alt="box" /></span>
+                                            <span class="mr-2">Skyfall</span>
+                                            <span class="ml-1"><img src="image/icons/view-datatable.png" alt="view" /></span>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="display-grid">
+                                                    <span>Alex Norbort</span>
+                                                    <span>(alex2norbert@gmail.com)</span>
+                                                </div>
+                                                <div class="p-3 d-flex">
+                                                    <span><img src="image/icons/message-datatable.png" alt="message" /></span>
+                                                    <span class="ml-2 align-middle"><img src="image/icons/right-arrow-datatable.png" alt="right" /></span>
+                                                    <span class="ml-2"><img src="image/icons/view-datatable.png" alt="view" /></span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>3/12/2021</div>
+                                            <div>11:38 AM</div>
+                                        </td>
+                                        <td>
+                                            <div class=" align-items-center">
+                                                <span>Never Expires </span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <span class="span-progress">Sent | Resend</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" class="select-item checkbox" name="select-item" value="1000" />
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
-                        </div>
-                        <div class="d-flex justify-content-end">
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-10">
-                                <div class="row">
-                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
-                                        <div class="form-check w-250 mt-3">
-                                            <input class="form-check-input" type="checkbox" value="" id="saveCustomMapping">
-                                            <label class="form-check-label" for="saveCustomMapping">
-                                                Save custom mapping
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 pl-0 pr-0">
-                                        <div class="input-group pt-2 pb-4">
-                                            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-7 col-xl-8 pl-0 pr-0">
-                                                <input class="form-control rounded-0 ml-2" type="text" aria-label="import" />
-                                            </div>
-                                            <div class="col-xs-12 col-sm-12 col-md-4     col-lg-5 col-xl-4 pl-0 pr-0 text-right">
-                                                <button class="btn btn-success btn-action ml-2">
-                                                    import
-                                                </button>
-                                                <button class="btn btn-light btn-action ml-2">
-                                                    Cancel
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </section>
                     <!-- Page Content End-->
@@ -335,10 +348,10 @@
         <!-- Scritps -->
         <script src="plugin/jQuery/jquery-3.6.0.slim.min.js"></script>
         <script src="plugin/fontawesome/all.min.js"></script>
+        <script src="plugin/bootstrap/popper.min.js"></script>
         <script src="plugin/bootstrap/bootstrap.js"></script>
         <script src="plugin/bootstrap-table/bootstrap-table.min.js"></script>
-        <script src="plugin/drag-drop-upload/jquery-simple-upload.js"></script>
         <script src="js/common.js"></script>
-        <script src="js/import-contact.js"></script>
+        <script src="js/history.js"></script>
     </body>
 </html>

@@ -1,0 +1,48 @@
+/*
+* Sms Settings Style
+*/
+.table {
+  border-left: 1px solid #dee2e6;
+  border-right: 1px solid #dee2e6;
+}
+.table .form-check {
+  margin-bottom: 0px !important;
+}
+.table.borderlessTable th,
+.table.borderlessTable td {
+  border-left: 0;
+  border-right: 0;
+}
+.modal-body {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+@media only screen and (min-width: 310px) and (max-width: 420px)  {
+  .modal-body {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.phoneNumberLeft {
+  width: 70px;
+  margin-right: 3px;
+}
+.phoneNumberMiddle {
+  width: 75px;
+  margin-right: 3px;
+  margin-left: 3px;
+}
+.phoneNumberRight {
+  width: 121px;
+  margin-left: 3px;
+}
+.color-border {
+  border-color: #ced4da;
+  color: #E0E0E0;
+  background: white;
+}
+.form-inline {
+  align-items: baseline;
+}

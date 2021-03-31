@@ -40,3 +40,11 @@
   border-color:#ced4da ;
   color:#E0E0E0;
 }
+.table.borderlessTable th,
+.table.borderlessTable td {
+  border: 0;
+}
+.modal-body {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}

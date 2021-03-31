@@ -5,7 +5,7 @@
   font-family: "fontawesome";
   src: url(../fonts/fontawesome-free-5.15.2-web/webfonts/fa-regular-400.ttf);
 }
-@media (max-width: 475px) {
+@media (max-width: 768px) {
   .container-inner-resp > .row{
     width: max-content;
   }
@@ -105,8 +105,23 @@
 /* Email Inbox Middle Style End */
 
 /* Email Inbox Right Style */
+.emailTopBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .email-inbox-right .profile-image img {
   width: 82px;
+}
+@media (max-width: 475px) {
+  .emailTopBar {
+    display: block;
+    justify-content: inherit;
+    align-items: center;
+  }
+  .email-inbox-right .profile-image img {
+    width: 3.5rem;
+  }
 }
 .toolbar-icons a:hover{
   text-decoration: none;

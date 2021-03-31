@@ -13,7 +13,7 @@
     <link href="plugin/bootstrap-table/bootstrap-table.min.css" rel="stylesheet" />
     <link href="CSS/styles.css" rel="stylesheet" />
     <link href="CSS/responsive.css" rel="stylesheet" />
-    <link href="CSS/subscribers.css" rel="stylesheet" />
+    <link href="CSS/sms-settings.css" rel="stylesheet" />
 </head>
 
 <body class="sidebar-fixed">
@@ -224,161 +224,144 @@
                 <section class="pt-4 pb-4">
                     <div class="container-inner">
                         <!-- Large modal -->
-                        <p>Click on the button to open the madal</p>
-                        <button type="button" class="btn btn-action btn-success" data-toggle="modal" data-target=".bd-example-modal-lg">Subscribers</button>
+                        <p>Click on the button to open the modal</p>
+                        <button type="button" class="btn btn-action btn-success" data-toggle="modal" data-target=".bd-example-modal-lg">Choose a phone number</button>
 
                         <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-lg">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h2 class="modal-title" id="myLargeModalLabel">Subscribers</h2>
+                                    <h2 class="modal-title" id="myLargeModalLabel">Choose a phone number</h2>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                       <span aria-hidden="true">×</span>
                                     </button>
                                   </div>
                                   <div class="modal-body">
-                                    <div>
-                                        <div class="pt-4">
-                                            <!-- step 1 section -->
-                                            <span class="d-block font-weight-bold mb-3">
-                                                Step 1: Select
-                                            </span>
-                                            <div class="pb-1">
-                                                <div class="row">
-                                                    <div class="col-12 col-lg-5 col-md-4">
-                                                        <span>Address Book:</span>
-                                                        <select class="form-control rounded-0" aria-label="Default select example">
-                                                            <option selected>Select All</option>
-                                                            <option value="1">One</option>
-                                                            <option value="2">Two</option>
-                                                            <option value="3">Three</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-12 col-lg-5 col-md-6">
-                                                        <span>Search:</span>
-                                                        <div class="input-group">
-                                                            <input class="form-control border-right-0 rounded-0" type="text" placeholder="Search..."
-                                                                aria-label="Search" />
+                                        <div class="pt-4 pb-4">
+                                            <h2 class="mb-3">Choose a phone number</h2>
+                                                <div id="toolbar">
+                                                    <div class="form-inline mt-5 mb-3">
+                                                        <div class="form-group phoneNumberLeft">
+                                                            <select class="form-control rounded-0 select-main mb-0 w-100">
+                                                                <option value="" selected disabled>+1</option>
+                                                                <option value="usa+1">+91</option>
+                                                                <option value="canada">+92</option>
+                                                            </select>
+                                                        </div>
+                                                        -
+                                                        <div class="form-group phoneNumberMiddle">
+                                                            <input type="text" class="form-control rounded-0 w-100" placeholder="(404)">
+                                                        </div>
+                                                        -
+                                                        <div class="input-group phoneNumberRight">
+                                                            <input class="form-control border-right-0 rounded-0" type="text" placeholder="257-8269" aria-label="Search" />
                                                             <div class="input-group-append">
-                                                                <button class="btn btn-outline-secondary bg-light border-left-0 color-border rounded-0">
+                                                                <button
+                                                                    class="btn btn-outline-secondary border-left-0 color-border rounded-0">
                                                                     <i class="fas fa-search"></i>
                                                                 </button>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-12 col-lg-2 col-md-2 d-flex justify-content-end align-items-end">
-                                                        <a href="javascript:void(0)" id="selectallSelect" class="text-green">
-                                                            Select All</a>
-                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="table-responsive">
-                                                <table class="table table-main table-striped borderlessTable selectTable">
+                                                <table 
+                                                data-toggle="table"
+                                                data-toolbar="#toolbar"
+                                                class="table table-main table-striped borderlessTable selectTable">
                                                     <tbody>
                                                         <tr>
-                                                            <th scope="row">1</th>
-                                                            <td>accountsupport@zoominfo.com</td>
-                                                            <td class="text-green text-fontsize">Add this address</td>
-                                                            <td class="text-right">
+                                                            <td>
                                                                 <div class="form-check">
-                                                                    <input class="form-check-input" type="checkbox" value="1"
-                                                                        id="addAddress1">
+                                                                    <input class="form-check-input" type="radio" name="phone" id="phone1" value="(415) 853-2353">
+                                                                    <label class="form-check-label" for="phone1">
+                                                                        (415) 853-2353
+                                                                    </label>
                                                                 </div>
                                                             </td>
+                                                            <td class="text-right">Available</td>
                                                         </tr>
                                                         <tr>
-                                                            <th scope="row">1</th>
-                                                            <td>accountsupport@zoominfo.com</td>
-                                                            <td class="text-green text-fontsize">Add this address</td>
-                                                            <td class="text-right">
+                                                            <td>
                                                                 <div class="form-check">
-                                                                    <input class="form-check-input" type="checkbox" value="2"
-                                                                        id="addAddress2">
+                                                                    <input class="form-check-input" type="radio" name="phone" id="phone1" value="(415) 853-2353">
+                                                                    <label class="form-check-label" for="phone1">
+                                                                        (415) 853-2353
+                                                                    </label>
                                                                 </div>
                                                             </td>
+                                                            <td class="text-right">Available</td>
                                                         </tr>
                                                         <tr>
-                                                            <th scope="row">1</th>
-                                                            <td>accountsupport@zoominfo.com</td>
-                                                            <td class="text-green text-fontsize">Add this address</td>
-                                                            <td class="text-right">
+                                                            <td>
                                                                 <div class="form-check">
-                                                                    <input class="form-check-input" type="checkbox" value="3"
-                                                                        id="addAddress3">
+                                                                    <input class="form-check-input" type="radio" name="phone" id="phone1" value="(415) 853-2353">
+                                                                    <label class="form-check-label" for="phone1">
+                                                                        (415) 853-2353
+                                                                    </label>
                                                                 </div>
                                                             </td>
+                                                            <td class="text-right">Available</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="radio" name="phone" id="phone1" value="(415) 853-2353">
+                                                                    <label class="form-check-label" for="phone1">
+                                                                        (415) 853-2353
+                                                                    </label>
+                                                                </div>
+                                                            </td>
+                                                            <td class="text-right">Available</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="radio" name="phone" id="phone1" value="(415) 853-2353">
+                                                                    <label class="form-check-label" for="phone1">
+                                                                        (415) 853-2353
+                                                                    </label>
+                                                                </div>
+                                                            </td>
+                                                            <td class="text-right">Available</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="radio" name="phone" id="phone1" value="(415) 853-2353">
+                                                                    <label class="form-check-label" for="phone1">
+                                                                        (415) 853-2353
+                                                                    </label>
+                                                                </div>
+                                                            </td>
+                                                            <td class="text-right">Available</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="radio" name="phone" id="phone1" value="(415) 853-2353">
+                                                                    <label class="form-check-label" for="phone1">
+                                                                        (415) 853-2353
+                                                                    </label>
+                                                                </div>
+                                                            </td>
+                                                            <td class="text-right">Available</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="radio" name="phone" id="phone1" value="(415) 853-2353">
+                                                                    <label class="form-check-label" for="phone1">
+                                                                        (415) 853-2353
+                                                                    </label>
+                                                                </div>
+                                                            </td>
+                                                            <td class="text-right">Available</td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
-                                            </div>    
-                                            <div class="d-flex justify-content-center">
-                                                <button type="button" class="width-240 btn btn-success text-uppercase position-relative pr-2 rounded-0 px-4 mb-5">
-                                                    All Selected Address
-                                                    <i class="bt-arrow fa fa-angle-down position-absolute text-green" aria-hidden="true"></i>
-                                                </button>
-                                            </div>
-                                            <!--  step 1 section end -->
                 
-                                            <!--  step 2 section -->
-                                                <div class="border-top pt-4">
-                                                    <span class="d-block mb-4 font-weight-bold">
-                                                        Step 2: Confirm
-                                                    </span>
-                                                    <div class="col-md-12 d-flex justify-content-end align-items-end pr-0">
-                                                        <a href="javascript:void(1)" id="selectremoveSelect" class="text-green">Select All</a>
-                                                        <a href="javascript:void(2)" id="selectremoveDeselect" class="text-green ml-4">Deselect All</a>
-                                                    </div>
-                                                </div>
-                                                <div class="table-responsive">
-                                                    <table class="table table-main table-striped selectremoveTable borderlessTable">
-                                                        <tbody>
-                                                            <tr>
-                                                                <th scope="row">1</th>
-                                                                <td>accountsupport@zoominfo.com</td>
-                                                                <td class="text-green text-fontsize">Add this address</td>
-                                                                <td class="text-right">
-                                                                    <div class="form-check">
-                                                                        <input class="form-check-input" type="checkbox" value="1"
-                                                                            id="addAddress1">
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th scope="row">1</th>
-                                                                <td>accountsupport@zoominfo.com</td>
-                                                                <td class="text-green text-fontsize">Add this address</td>
-                                                                <td class="text-right">
-                                                                    <div class="form-check">
-                                                                        <input class="form-check-input" type="checkbox" value="2"
-                                                                            id="addAddress2">
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th scope="row">1</th>
-                                                                <td>accountsupport@zoominfo.com</td>
-                                                                <td class="text-green text-fontsize">Add this address</td>
-                                                                <td class="text-right">
-                                                                    <div class="form-check">
-                                                                        <input class="form-check-input" type="checkbox" value="3"
-                                                                            id="addAddress3">
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                                <div class="d-flex justify-content-center pb-4">
-                                                    <button type="button" class="width-240 btn btn-warning text-uppercase position-relative rounded-0">
-                                                        Remove All Selected Address
-                                                        <i class="fa fa-angle-up position-absolute redbt-arrow text-red" aria-hidden="true"></i>
-                                                    </button>
-                                                </div>
-                                                <!--  step 2 section end -->
-                
-                                                <div class="d-flex justify-content-center pt-2">
-                                                    <button type="button" class="btn btn-light text-uppercase text-green border rounded-0 ok-wh">OK</button>
-                                                </div>
+                                            <div class="d-flex mt-5 justify-content-center pt-2">
+                                                <button type="button" class="btn btn-action btn-success rounded-0">Choose</button>
                                             </div>
                                         </div>
                                   </div>

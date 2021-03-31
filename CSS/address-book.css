@@ -1,0 +1,56 @@
+/*
+* History Style
+*/
+.fixed-table-toolbar .bs-bars #toolbar select {
+  width: 100px;
+}
+/* Data tables style*/
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter,
+.dataTables_wrapper .dataTables_info,
+.dataTables_wrapper .dataTables_paginate {
+  padding: 1.25rem;
+}
+.fixed-table-toolbar .bs-bars {
+  width: 100%;
+}
+.fixed-table-toolbar .bs-bars #toolbar {
+  display: flex;
+  justify-content: space-between;
+}
+.circle-icon {
+  color: #4D8943;
+  font-size: 8px;
+}
+.user-icon{
+  color: #556b98;
+  font-size: 15px;
+}
+.header-bg {
+  background:#F0F0F0;
+}
+.select-main {
+  width: 120px !important;
+}
+.text-15 {
+  font-size: 15px;
+}
+.font-25{
+  font-size: 25px;
+}
+.display-grid{
+  display: grid !important
+}
+.d-grid{
+  display: grid;
+}
+.w-content{
+  width: fit-content;
+}
+.l-space{
+  letter-spacing: 5px;
+}
+.text-black a{
+  color: black;
+}
+/* Data tables style end*/
