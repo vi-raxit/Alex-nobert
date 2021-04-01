@@ -4,13 +4,6 @@
 .fixed-table-toolbar .bs-bars #toolbar select {
   width: 100px;
 }
-/* Data tables style*/
-.dataTables_wrapper .dataTables_length,
-.dataTables_wrapper .dataTables_filter,
-.dataTables_wrapper .dataTables_info,
-.dataTables_wrapper .dataTables_paginate {
-  padding: 1.25rem;
-}
 .fixed-table-toolbar .bs-bars {
   width: 100%;
 }
@@ -44,13 +37,24 @@
 .d-grid{
   display: grid;
 }
-.w-content{
-  width: fit-content;
+.text-16 {
+  font-size: 16px;
 }
-.l-space{
+.svgIcon {
+  fill: #5E9331;
+  margin-right: 5px;
+}
+.sortByLetter-container {
   letter-spacing: 5px;
+  width: fit-content;
+  background-color: #F7F7F7;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.5rem;
 }
-.text-black a{
-  color: black;
+.sortByLetter-container a {
+  color: #000000;
 }
-/* Data tables style end*/
+.ml-8 {
+  margin-left: 8px;
+}

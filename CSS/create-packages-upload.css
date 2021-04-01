@@ -1,0 +1,24 @@
+/*
+* Create Packages Upload Style
+*/
+.cursor-scroll{
+  cursor: all-scroll;
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+.w-90{
+  min-width: 90px;
+}
+.w-270{
+  min-width: 270px;
+}
+.w-160{
+  min-width: 160px;
+}
+.w-151{
+  min-width: 151px;
+}
+.w-143{
+  min-width: 143px;
+}

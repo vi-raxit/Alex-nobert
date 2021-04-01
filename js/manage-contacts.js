@@ -14,7 +14,6 @@ jQuery( document ).ready(function($) {
 
  //check selected items
  $("input.select-item").click(function () {
-     var checked = this.checked;
      checkSelected();
  });
 
@@ -24,6 +23,11 @@ jQuery( document ).ready(function($) {
      var total = $("input.select-item").length;
      var len = $("input.select-item:checked:checked").length;
      all.checked = len===total;
+     if(len>0) {
+      $(".dropdown.actions").removeClass("d-none")
+  } else {
+      $(".dropdown.actions").addClass("d-none")
+  }
  }
  $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
     if (!$(this).next().hasClass('show')) {

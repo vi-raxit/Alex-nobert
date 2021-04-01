@@ -180,11 +180,6 @@
                     <!-- Mobile Top Nav End-->
                     <nav class="sidebar-topnav shadow-sm navbar navbar-expand navbar-light box-shadow bg-light">
                         <!-- Breadcrumb-->
-                        <span class="pl-2 pr-2">
-                            <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.589996 10.58L5.17 6L0.589996 1.41L2 0L8 6L2 12L0.589996 10.58Z" fill="black"/>
-                            </svg>
-                        </span>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="index.html"></a>Template Log</a></li>
                         </ol>
@@ -205,43 +200,43 @@
                 <main class="pt-4 pb-4">
                     <!-- Page Content -->
                     <section class="container-fluid">
-                        <div class="card">
+                        <div class="card pb-4 min-height-100">
                             <!-- Table Toolbar -->
                             <div id="toolbar" class="flex justify-content-between">
                                 <div class="d-flex">
                                     <div class="input-group ml-3">
-                                        <input class="form-control border-right-0 rounded-0" type="text" placeholder="Search..." aria-label="Search" />
+                                        <input class="form-control border-right-0 rounded-0" type="text" placeholder="Search  By Template Name" aria-label="Search" />
                                         <div class="input-group-append">
-                                            <button class="btn btn-outline-secondary bg-light border-left-0 color-border rounded-0">
+                                            <button class="btn btn-outline-secondary border-left-0 color-border rounded-0">
                                                 <i class="fas fa-search"></i>
                                             </button>
                                         </div>
                                     </div>
-                                    <div class="align-middle d-flex"><button type="button" class="btn btn-light">Reset</button></div>
+                                    <div class="align-middle d-flex mr-3"><button type="button" class="btn btn-action btn-light ml-2">Reset</button></div>
                                 </div>
-                                <div class="display-flex flex-content flex-d mt-1 pt-10">
+                                <div class="display-flex flex-content flex-d mt-1">
                                     <div class="flex-d flex">
-                                    <div class="dropdown mr-3 m-12 mt-12">
-                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            My Templates
-                                        </button>
-                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        <div class="dropdown mr-3 mb-12 mt-12">
+                                            <button class="btn btn-select dropdown-toggle" type="button" id="filter1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                My Templates
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="filter1">
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                                <a class="dropdown-item" href="#">Something else here</a>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown mr-3 mb-12 ">
+                                            <button class="btn btn-select dropdown-toggle" type="button" id="filter2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                All Records
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="filter2">
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                                <a class="dropdown-item" href="#">Something else here</a>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="dropdown mr-3 m-12 ">
-                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            All Records
-                                        </button>
-                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
-                                    </div>
-                                </div>
                                     <div class="refreshTable refresh-d mr-3"><button class="bg-transparent btn btn-sm">
                                         <img src="image/icons/refresh-datatable.png" alt="Refersh Table" /></button>
                                     </div>
@@ -252,18 +247,16 @@
                                 id="b-table" 
                                 data-toggle="table" 
                                 data-filter-control="true" 
-                                data-show-export="true" 
                                 data-toolbar="#toolbar"
-                                data-show-search-clear-button="true" 
                                 class="table borderlessTable">
                                 <thead>
-                                    <tr class="text-fontsize">
-                                        <th data-field="name" data-filter-control="input">Template Name</th>
-                                        <th data-field="date" data-filter-control="select">Folder</th>
-                                        <th data-field="examen" data-filter-control="select">Total Uses</th>
-                                        <th data-field="status">Email Open Rate</th>
-                                        <th data-field="interest">Packae Open Rate</th>
-                                        <th data-field="fileviews">Sharing</th>
+                                    <tr>
+                                        <th data-field="templaetName" data-filter-control="input">Template Name</th>
+                                        <th data-field="folder" data-filter-control="select">Folder</th>
+                                        <th data-field="totalUses" data-filter-control="select">Total Uses</th>
+                                        <th data-field="emailOpenRate">Email Open Rate</th>
+                                        <th data-field="packageOpenRate">Package Open Rate</th>
+                                        <th data-field="sharing">Sharing</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -275,8 +268,8 @@
                                         <td>100%</td>
                                         <td>
                                             <div class="dropdown">
-                                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    All Records
+                                                <button class="btn btn-select dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Share It
                                                 </button>
                                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                                     <a class="dropdown-item" href="#">Action</a>

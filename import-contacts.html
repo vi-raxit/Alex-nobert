@@ -240,12 +240,16 @@
                         <!-- File Drop/Upload End -->
                         <div class="mb-4">
                             <div class="toolbarImportContacts">
-                                <select class="form-control w-auto rounded-0 mb-1">
-                                    <option value="" disabled selected>Select Saved Mapping</option>
-                                    <option value="mapping-2">Mapping-1</option>
-                                    <option value="mapping-2">Mapping-2</option>
-                                    <option value="mapping-2">Mapping-3</option>
-                                </select>
+                                <div class="dropdown ml-3 mb-12 mt-12">
+                                    <button class="btn btn-select dropdown-toggle" type="button" id="filter1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Select Saved Mapping
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="filter1">
+                                        <a class="dropdown-item" href="#">Mapping-1</a>
+                                        <a class="dropdown-item" href="#">Mapping-2</a>
+                                        <a class="dropdown-item" href="#">Mapping-3</a>
+                                    </div>
+                                </div>
                             </div>
                             <table id="b-table" 
                                     data-toggle="table"
@@ -335,6 +339,7 @@
         <!-- Scritps -->
         <script src="plugin/jQuery/jquery-3.6.0.slim.min.js"></script>
         <script src="plugin/fontawesome/all.min.js"></script>
+        <script src="plugin/bootstrap/popper.min.js"></script>
         <script src="plugin/bootstrap/bootstrap.js"></script>
         <script src="plugin/bootstrap-table/bootstrap-table.min.js"></script>
         <script src="plugin/drag-drop-upload/jquery-simple-upload.js"></script>

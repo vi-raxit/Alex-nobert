@@ -200,35 +200,36 @@
                 <main class="pt-4 pb-4">
                     <!-- Page Content -->
                     <section class="container-fluid">
-                        <div class="card">
+                        <div class="card pb-4 min-height-100">
                             <!-- Table Toolbar -->
                             <div id="toolbar">
-                                <select class="form-control border-0 select-main mb-0">
-                                    <option value="">Status-All</option>
-                                    <option value="Opened">Opened</option>
-                                    <option value="Email Sent">Email Sent</option>
-                                </select>
+                                <div class="dropdown ml-3 mb-12 mt-12">
+                                    <button class="btn btn-select dropdown-toggle" type="button" id="filter1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Status-All
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="filter1">
+                                        <a class="dropdown-item" href="#">Opened</a>
+                                        <a class="dropdown-item" href="#">Email Sent</a>
+                                    </div>
+                                </div>
                                 <div class="refreshTable mr-3"><button  class="bg-transparent btn btn-sm"><img src="image/icons/refresh-datatable.png" alt="Refersh Table"/></button></div>
                             </div>
                             <!-- Table Toolbar End -->
                             <table id="b-table" 
                                     data-toggle="table"
-                                    data-filter-control="true" 
-                                    data-show-export="true"
                                     data-toolbar="#toolbar"
-                                    data-show-search-clear-button="true"
                                     class="table borderlessTable">
                                 <thead>
-                                    <tr class="text-uppercase text-fontsize">
+                                    <tr>
                                         <th class="w-180" data-field="name" data-filter-control="input">Name</th>
-                                        <th class="w-185" data-field="date" data-filter-control="select">Sent To</th>
-                                        <th class="w-170" data-field="examen" data-filter-control="select">Date Sent</th>
+                                        <th class="w-185" data-field="senTo" data-filter-control="select">Sent To</th>
+                                        <th class="w-170" data-field="DateSent" data-filter-control="select">Date Sent</th>
                                         <th class="w-185" data-field="status">Status</th>
                                         <th data-field="interest">Interest</th>
                                         <th data-field="fileviews">File Views</th>
                                     </tr>
                                 </thead>
-                                <tbody class="text-15">
+                                <tbody>
                                     <tr>
                                         <td>
                                             <span class="mr-2"><img src="image/icons/box-datatable.png" alt="box" /></span>

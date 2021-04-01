@@ -50,10 +50,10 @@
 .text-15 {
   font-size: 15px;
 }
-.dropdown-menu.show {
+/* .dropdown-menu.show {
   transform: translate3d(-98px, 22px, 0px) !important;
   border-radius: 0;
-}
+} */
 .dropdown-menu.show .dropdown-item {
   padding: 0.15rem 0.45rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);

@@ -83,6 +83,9 @@ h5 {
   min-height: calc(100vh - 56px);
   margin-left: -200px;
 }
+.min-height-100 {
+  min-height: calc(100vh - 10em);
+}
 .box-shadow {
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 16%), 0 1px 2px 0 rgb(0 0 0 / 12%);
 }
@@ -173,7 +176,7 @@ h5 {
 .sidebar-topnav .breadcrumb {
   background: none;
   margin-bottom: 0;
-  font-size: 24px;
+  font-size: 22px;
 }
 .sidebar-topnav .breadcrumb a {
   color: inherit;
@@ -487,8 +490,8 @@ thead {
 .bootstrap-table .table thead th .th-inner {
   font-size: 14px;
 }
-.table td {
-  font-size: 14px;
+.table th {
+  text-transform: uppercase;
 }
 .table th, .table td {
   padding: 0.95rem;
