@@ -28,7 +28,6 @@ var $table = $('#b-table');
 
 
 $('#expiration-date').datepicker({
-    multidate: true,
     format: 'dd-mm-yyyy',
     autoclose: true,
     calendarWeeks : true,
@@ -36,7 +35,6 @@ $('#expiration-date').datepicker({
     disableTouchKeyboard: true
 });
 $('#delivery-date').datepicker({
-    multidate: true,
     format: 'dd-mm-yyyy',
     autoclose: true,
     calendarWeeks : true,
@@ -44,7 +42,6 @@ $('#delivery-date').datepicker({
     disableTouchKeyboard: true
 });
 $('#expiry-date').datepicker({
-    multidate: true,
     format: 'dd-mm-yyyy',
     autoclose: true,
     calendarWeeks : true,

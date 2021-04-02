@@ -12,7 +12,7 @@
         <link href="plugin/bootstrap-table/bootstrap-table.min.css" rel="stylesheet" />
         <link href="CSS/styles.css" rel="stylesheet" />
         <link href="CSS/responsive.css" rel="stylesheet" />
-        <link href="CSS/history.css" rel="stylesheet" />
+        <link href="CSS/admin-template-log.css" rel="stylesheet" />
     </head>
     <body class="sidebar-fixed">
         <div id="containerMain">
@@ -181,7 +181,19 @@
                     <nav class="sidebar-topnav shadow-sm navbar navbar-expand navbar-light box-shadow bg-light">
                         <!-- Breadcrumb-->
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html"></a>History</a></li>
+                            <li class="breadcrumb-item"><a href="index.html"></a>Admin Panel</a></li>
+                            <span class="pl-2 pr-2">
+                                <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.589996 10.58L5.17 6L0.589996 1.41L2 0L8 6L2 12L0.589996 10.58Z" fill="black"/>
+                                </svg>
+                            </span>
+                            <li class="breadcrumb-item">User Listing</li>
+                            <span class="pl-2 pr-2">
+                                <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.589996 10.58L5.17 6L0.589996 1.41L2 0L8 6L2 12L0.589996 10.58Z" fill="black"/>
+                                </svg>
+                            </span>
+                            <li class="breadcrumb-item active">Template Log</li>
                         </ol>
                     
                         <!-- Navbar Search-->
@@ -201,135 +213,68 @@
                     <!-- Page Content -->
                     <section class="container-fluid">
                         <div class="card pb-4 min-height-100">
-                            <table
-                             id="b-table" 
-                             data-toggle="table" 
-                             data-filter-control="true" 
-                             data-show-export="true"
-                             data-show-search-clear-button="true" 
-                             class="table borderlessTable">
+                            <!-- Table Toolbar -->
+                            <div id="toolbar" class="d-flex justify-content-end p-2">
+                                <div class="">
+                                    <div class="dropdown mr-3 mt-12 d-inline">
+                                        <button class="btn btn-select dropdown-toggle mb-12" type="button" id="filter1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            My Templates
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="filter1">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown d-inline">
+                                        <button class="btn btn-select dropdown-toggle" type="button" id="filter2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            All Records
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="filter2">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="refreshTable refresh-d"><button class="bg-transparent btn btn-sm">
+                                    <img src="image/icons/refresh-datatable.png" alt="Refersh Table" /></button>
+                                </div>
+                            </div>
+                            <!-- Table Toolbar End -->
+                            <table 
+                                id="b-table" 
+                                data-toggle="table" 
+                                data-filter-control="true" 
+                                class="table borderlessTable">
                                 <thead>
-                                    <tr class="text-fontsize">
-                                        <th class="w-180" data-field="name" data-sortable="true" data-filter-control="input">Name</th>
-                                        <th class="w-185" data-field="sent" data-sortable="true" data-filter-control="select">Sent To</th>
-                                        <th class="w-170" data-field="date" data-sortable="true" data-filter-control="select">Date Sent</th>
-                                        <th class="w-170" data-field="expiration" data-sortable="true" data-filter-control="select">Expiration</th>
-                                        <th class="w-170" data-field="status">Status</th>
-                                        <th class="w-45" data-field="checkbox">
-                                            <input type="checkbox" class="select-all checkbox" name="select-all" />
-                                        </th>
+                                    <tr>
+                                        <th data-field="templaetName" data-filter-control="input">Template Name</th>
+                                        <th data-field="folder" data-filter-control="select">Folder</th>
+                                        <th data-field="totalUses" data-filter-control="select">Total Uses</th>
+                                        <th data-field="emailOpenRate">Email Open Rate</th>
+                                        <th data-field="packageOpenRate">Package Open Rate</th>
+                                        <th data-field="sharing">Sharing</th>
                                     </tr>
                                 </thead>
-                                <tbody class="text-15">
+                                <tbody>
                                     <tr>
+                                        <td>First Touch <small class="text-muted">(Created by: Alex Norbert)</small></td>
+                                        <td>John Doe</td>
+                                        <td>1</td>
+                                        <td>100%</td>
+                                        <td>100%</td>
                                         <td>
-                                            <span class="mr-2"><img src="image/icons/box-datatable.png" alt="box" /></span>
-                                            <span class="mr-2">Skyfall</span>
-                                            <span class="ml-1"><img src="image/icons/view-datatable.png" alt="view" /></span>
-                                        </td>
-                                        <td>
-                                            <div class="d-flex justify-content-between">
-                                                <div class="display-grid">
-                                                    <span>Alex Norbort</span>
-                                                    <span>(alex2norbert@gmail.com)</span>
-                                                </div>
-                                                <div class="p-3 d-flex">
-                                                    <span><img src="image/icons/message-datatable.png" alt="message" /></span>
-                                                    <span class="ml-2"><img src="image/icons/right-arrow-datatable.png" alt="right" /></span>
-                                                    <span class="ml-2"><img src="image/icons/view-datatable.png" alt="view" /></span>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>3/12/2021</div>
-                                            <div>11:38 AM</div>
-                                        </td>
-                                        <td>
-                                            <div class=" align-items-center">
-                                                <span>Never Expires </span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <span class="span-progress">Sent | Resend</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <input type="checkbox" class="select-item checkbox" name="select-item" value="1000" />
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <span class="mr-2"><img src="image/icons/box-datatable.png" alt="box" /></span>
-                                            <span class="mr-2">Skyfall</span>
-                                            <span class="ml-1"><img src="image/icons/view-datatable.png" alt="view" /></span>
-                                        </td>
-                                        <td>
-                                            <div class="d-flex justify-content-between">
-                                                <div class="display-grid">
-                                                    <span>Alex Norbort</span>
-                                                    <span>(alex2norbert@gmail.com)</span>
-                                                </div>
-                                                <div class="p-3 d-flex">
-                                                    <span><img src="image/icons/message-datatable.png" alt="message" /></span>
-                                                    <span class="ml-2"><img src="image/icons/right-arrow-datatable.png" alt="right" /></span>
-                                                    <span class="ml-2"><img src="image/icons/view-datatable.png" alt="view" /></span>
+                                            <div class="dropdown">
+                                                <button class="btn btn-select dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Share It
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item" href="#">Action</a>
+                                                    <a class="dropdown-item" href="#">Another action</a>
+                                                    <a class="dropdown-item" href="#">Something else here</a>
                                                 </div>
                                             </div>
-                                        </td>
-                                        <td>
-                                            <div>3/12/2021</div>
-                                            <div>11:38 AM</div>
-                                        </td>
-                                        <td>
-                                            <div class=" align-items-center">
-                                                <span>Never Expires </span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <span class="span-progress">Sent | Resend</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <input type="checkbox" class="select-item checkbox" name="select-item" value="1000" />
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <span class="mr-2"><img src="image/icons/box-datatable.png" alt="box" /></span>
-                                            <span class="mr-2">Skyfall</span>
-                                            <span class="ml-1"><img src="image/icons/view-datatable.png" alt="view" /></span>
-                                        </td>
-                                        <td>
-                                            <div class="d-flex justify-content-between">
-                                                <div class="display-grid">
-                                                    <span>Alex Norbort</span>
-                                                    <span>(alex2norbert@gmail.com)</span>
-                                                </div>
-                                                <div class="p-3 d-flex">
-                                                    <span><img src="image/icons/message-datatable.png" alt="message" /></span>
-                                                    <span class="ml-2 align-middle"><img src="image/icons/right-arrow-datatable.png" alt="right" /></span>
-                                                    <span class="ml-2"><img src="image/icons/view-datatable.png" alt="view" /></span>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>3/12/2021</div>
-                                            <div>11:38 AM</div>
-                                        </td>
-                                        <td>
-                                            <div class=" align-items-center">
-                                                <span>Never Expires </span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <span class="span-progress">Sent | Resend</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <input type="checkbox" class="select-item checkbox" name="select-item" value="1000" />
                                         </td>
                                     </tr>
                                 </tbody>
@@ -347,6 +292,5 @@
         <script src="plugin/bootstrap/bootstrap.js"></script>
         <script src="plugin/bootstrap-table/bootstrap-table.min.js"></script>
         <script src="js/common.js"></script>
-        <script src="js/history.js"></script>
     </body>
 </html>

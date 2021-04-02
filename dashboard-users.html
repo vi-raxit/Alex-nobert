@@ -11,10 +11,10 @@
     <!-- Styles -->
     <link href="plugin/bootstrap/bootstrap.css" rel="stylesheet" />
     <link href="plugin/bootstrap-table/bootstrap-table.min.css" rel="stylesheet" />
-    <link href="plugin/jquery-ui/jquery-ui.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.css" rel="stylesheet">
     <link href="CSS/styles.css" rel="stylesheet" />
     <link href="CSS/responsive.css" rel="stylesheet" />
-    <link href="CSS/create-packages-upload.css" rel="stylesheet" />
+    <link href="CSS/dashboard-users.css" rel="stylesheet" />
 </head>
 
 <body class="sidebar-fixed">
@@ -189,19 +189,13 @@
                 <nav class="sidebar-topnav shadow-sm navbar navbar-expand navbar-light box-shadow bg-light">
                     <!-- Breadcrumb-->
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html"></a>Package Manager</a></li>
+                        <li class="breadcrumb-item"><a href="index.html"></a>Admin Panel</a></li>
                         <span class="pl-2 pr-2">
                             <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0.589996 10.58L5.17 6L0.589996 1.41L2 0L8 6L2 12L0.589996 10.58Z" fill="black" />
                             </svg>
                         </span>
-                        <li class="breadcrumb-item active">Skyfall</li>
-                        <span class="pl-2 pr-2">
-                            <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.589996 10.58L5.17 6L0.589996 1.41L2 0L8 6L2 12L0.589996 10.58Z" fill="black" />
-                            </svg>
-                        </span>
-                        <li class="breadcrumb-item active">File Manager</li>
+                        <li class="breadcrumb-item active">Dashboard</li>
                     </ol>
                     <!-- Navbar Search-->
                     <form class="d-none hideIn-mobile d-md-inline-block form-inline ml-auto mr-0 my-2 my-md-0">
@@ -220,143 +214,71 @@
                 <!-- Page Content -->
                 <section class="container-fluid">
                     <div class="card pb-4 min-height-100">
-                        <div class="d-flex justify-content-between p-2">
-                            <h4 class="mb-0 d-flex align-items-center">Skyfall</h4>
-                            <div>
-                                <button type="button" class="btn btn-success">Package Preview</button>
-                                <button type="button" class="btn btn-warning d-none delete ml-2">Delete</button>
+                        <div class="row p-3">
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 pb-2">
+                                <ul class="list-group text-15">
+                                    <li class="list-group-item border-0 px-1 py-1"><strong>Company Name :</strong> SYM</li>
+                                    <li class="list-group-item border-0 px-1 py-1"><strong>Plan :</strong> Business</li>
+                                    <li class="list-group-item border-0 px-1 py-1"><strong>Plan Users :</strong> 20</li>
+                                    <li class="list-group-item border-0 px-1 py-1"><strong>Total Available Users :</strong> 20</li>
+                                    <li class="list-group-item border-0 px-1 py-1"><strong>Registered Users :</strong> 2</li>
+                                    <li class="list-group-item border-0 px-1 py-1"><strong>Available Users :</strong> 18</li>
+                                </ul>
                             </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 pb-2">
+                                <div class="text-center text-15"><strong>User Graph:</strong></div>
+                                <canvas id="remainingUsers" width="300" height="100"></canvas>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end flex-wrap button-res mx-3">
+                            <button type="button" class="btn btn-light-outline btn-action mb-3 mx-1 active">Users</button>
+                            <button type="button" class="btn btn-light-outline btn-action mb-3 mx-1">Packages</button>
+                            <button type="button" class="btn btn-light-outline btn-action mb-3 mx-1">Storage</button>
+                            <button type="button" class="btn btn-light-outline btn-action mb-3 mx-1">Streaming</button>
                         </div>
                         <table id="b-table" data-toggle="table" class="table borderlessTable">
                             <thead>
                                 <tr>
-                                    <th data-field="image" data-filter-control="input" class="w-90"></th>
-                                    <th data-field="fileName" data-filter-control="input" class="w-270">File Name</th>
-                                    <th data-field="description" data-filter-control="input" class="w-160">Description</th>
-                                    <th data-field="options" data-filter-control="input" class="w-151">Options</th>
-                                    <th data-field="displayOrder" data-filter-control="input" class="w-143">Display Order</th>
-                                    <th data-field="checkbox">
-                                        <input type="checkbox" class="select-all checkbox" name="select-all" />
-                                    </th>
+                                    <th data-field="sr" data-filter-control="input">Sr #</th>
+                                    <th data-field="name" data-filter-control="input">Name</th>
+                                    <th data-field="email" data-filter-control="input">Email</th>
+                                    <th data-field="status" data-filter-control="input">Status</th>
+                                    <th data-field="accountType" data-filter-control="input">Account Type</th>
                                 </tr>
                             </thead>
-                            <tbody class="cursor-scroll">
+                            <tbody>
                                 <tr>
                                     <td>
-                                        <span class="mr-2"><img src="image/views-thumb-1.png" alt="box" /></span>
-                                        <span><i class="fas fa-pen cursor-pointer"></i></span>
+                                        <span>1</span>
                                     </td>
                                     <td>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <span>skyfall trailer.mp4(185.11 MB) 3/12/2021 5:10:23 AM</span>
-                                            <span class="cursor-pointer"><img src="image/icons/view-datatable.png" alt="view" /></span>
-                                        </div>
+                                        <span>Alex Norbert</span>
                                     </td>
                                     <td>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <span>SKYFALL trailer</span>
-                                            <span><i class="fas fa-pen cursor-pointer"></i></span>
-                                        </div>
+                                        <span>sendyourmedia2@gmail.com</span>
                                     </td>
                                     <td>
-                                        <span class="mr-2"><input type="checkbox" class="select checkbox"
-                                                name="select-item-id" value="1" /></span>
-                                        <span>Allow Download </span>
+                                        <span>Active</span>
                                     </td>
                                     <td>
-                                        <span class="mr-2"><i class="fas fa-sort"></i></span>
-                                        <span>Drag to re-order</span>
-                                    </td>
-                                    <td>
-                                        <input type="checkbox" class="select-item checkbox" name="select-item"
-                                            value="1000" />
+                                        <span>Admin</span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <span class="mr-2"><img src="image/views-thumb-2.png" alt="box" /></span>
-                                        <span><i class="fas fa-pen cursor-pointer"></i></span>
+                                        <span>2</span>
                                     </td>
                                     <td>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <span>daniel craig as bond.jpg (0.02 MB) 3/12/2021 5:05:46 AM</span>
-                                            <span class="cursor-pointer"><img src="image/icons/view-datatable.png" alt="view" /></span>
-                                        </div>
+                                        <span>Rakesh Patel</span>
                                     </td>
                                     <td>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <span>Daniel Craig as James Bond</span>
-                                            <span><i class="fas fa-pen cursor-pointer"></i></span>
-                                        </div>
+                                        <span>patelvinod@gmail.com</span>
                                     </td>
                                     <td>
-                                        <span class="mr-2"><input type="checkbox" class="select checkbox" name="select-item-id" value="2" /></span>
-                                        <span>Allow Download </span>
+                                        <span>Active</span>
                                     </td>
                                     <td>
-                                        <span class="mr-2"><i class="fas fa-sort"></i></span>
-                                        <span>Drag to re-order</span>
-                                    </td>
-                                    <td>
-                                        <input type="checkbox" class="select-item checkbox" name="select-item" value="1000" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span class="mr-2"><img src="image/views-thumb-1.png" alt="box" /></span>
-                                        <span><i class="fas fa-pen cursor-pointer"></i></span>
-                                    </td>
-                                    <td>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <span>skyfall trailer.mp4(185.11 MB) 3/12/2021 5:10:23 AM</span>
-                                            <span class="cursor-pointer"><img src="image/icons/view-datatable.png" alt="view" /></span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <span>James Bond Recovery</span>
-                                            <span><i class="fas fa-pen cursor-pointer"></i></span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <span class="mr-2"><input type="checkbox" class="select checkbox" name="select-item-id" value="3" /></span>
-                                        <span>Allow Download </span>
-                                    </td>
-                                    <td>
-                                        <span class="mr-2"><i class="fas fa-sort"></i></span>
-                                        <span>Drag to re-order</span>
-                                    </td>
-                                    <td>
-                                        <input type="checkbox" class="select-item checkbox" name="select-item" value="1000" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span class="mr-2"><img src="image/views-thumb-2.png" alt="box" /></span>
-                                        <span><i class="fas fa-pen cursor-pointer"></i></span>
-                                    </td>
-                                    <td>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <span>daniel craig as bond.jpg (0.02 MB) 3/12/2021 5:05:46 AM</span>
-                                            <span class="cursor-pointer"><img src="image/icons/view-datatable.png" alt="view" /></span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <span>James BOnd Skyfall</span>
-                                            <span><i class="fas fa-pen cursor-pointer"></i></span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <span class="mr-2"><input type="checkbox" class="select checkbox" name="select-item-id" value="4" /></span>
-                                        <span>Allow Download </span>
-                                    </td>
-                                    <td>
-                                        <span class="mr-2"><i class="fas fa-sort"></i></span>
-                                        <span>Drag to re-order</span>
-                                    </td>
-                                    <td>
-                                        <input type="checkbox" class="select-item checkbox" name="select-item" value="1000" />
+                                        <span>Admin</span>
                                     </td>
                                 </tr>
                             </tbody>
@@ -374,9 +296,9 @@
     <script src="plugin/bootstrap/popper.min.js"></script>
     <script src="plugin/bootstrap/bootstrap.js"></script>
     <script src="plugin/bootstrap-table/bootstrap-table.min.js"></script>
-    <script src="plugin/jquery-ui/jquery-ui.js"></script>
+    <script src="plugin/chartJs/Chart.min.js"></script>
     <script src="js/common.js"></script>
-    <script src="js/create-packages-upload.js"></script>
+    <script src="js/dashboard-users.js"></script>
 </body>
 
 </html>

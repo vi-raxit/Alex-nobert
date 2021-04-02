@@ -9,10 +9,11 @@
         <title>Dashboard</title>
         <!-- Styles -->
         <link href="plugin/bootstrap/bootstrap.css" rel="stylesheet" />
+        <link href="plugin/bootstrap-datepicker/bootstrap-datepicker.css" rel="stylesheet" />
         <link href="plugin/bootstrap-table/bootstrap-table.min.css" rel="stylesheet" />
         <link href="CSS/styles.css" rel="stylesheet" />
         <link href="CSS/responsive.css" rel="stylesheet" />
-        <link href="CSS/history.css" rel="stylesheet" />
+        <link href="CSS/user-activity.css" rel="stylesheet" />
     </head>
     <body class="sidebar-fixed">
         <div id="containerMain">
@@ -181,7 +182,15 @@
                     <nav class="sidebar-topnav shadow-sm navbar navbar-expand navbar-light box-shadow bg-light">
                         <!-- Breadcrumb-->
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html"></a>History</a></li>
+                            <li class="breadcrumb-item"><a href="index.html"></a>Admin Panel</a></li>
+                            <span class="pl-2 pr-2">
+                                <svg width="8" height="12" viewBox="0 0 8 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.589996 10.58L5.17 6L0.589996 1.41L2 0L8 6L2 12L0.589996 10.58Z"
+                                        fill="black" />
+                                </svg>
+                            </span>
+                            <li class="breadcrumb-item">User Activity</li>
                         </ol>
                     
                         <!-- Navbar Search-->
@@ -201,6 +210,92 @@
                     <!-- Page Content -->
                     <section class="container-fluid">
                         <div class="card pb-4 min-height-100">
+                            <div class="p-3">
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-12 mb-2">
+                                        <span class="mr-3">Select Channel</span>
+                                        <div class="dropdown d-inline mr-3">
+                                            <button class="btn btn-select dropdown-toggle mb-2" type="button" id="selectChannel" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Package By Email
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="selectChannel">
+                                                <a class="dropdown-item" href="#">Package By Email</a>
+                                                <a class="dropdown-item" href="#">Package Shared</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-3 mt-2 pr-0">
+                                        <div class="form-check float-left mr-3 mt-2">
+                                            <input class="form-check-input" type="radio" name="selectUser" id="selectUser" value="alex-norbert" >
+                                            <label class="form-check-label" for="selectUser">
+                                                Select User
+                                            </label>
+                                        </div>
+                                        <div class="dropdown d-inline mr-3">
+                                            <button class="btn btn-select dropdown-toggle mb-2" type="button" id="usersDropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                All
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="usersDropdown1">
+                                                <a class="dropdown-item" href="#">Alex Norbert</a>
+                                                <a class="dropdown-item" href="#">John Doe</a>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown d-inline">
+                                            <button class="btn btn-select dropdown-toggle mb-2" type="button" id="usersDropdown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                All
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="usersDropdown2">
+                                                <a class="dropdown-item" href="#">Alex Norbert</a>
+                                                <a class="dropdown-item" href="#">John Doe</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
+                                        <div class="form-check mt-3">
+                                            <input class="form-check-input" type="radio" name="selectUser" id="selectByDateRange" value="option1" checked>
+                                            <label class="form-check-label" for="selectByDateRange">
+                                                Select By Date Range
+                                            </label>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-6">
+                                        <div class="row align-items-center">
+                                            <div class="col-12 col-sm-5 col-md-5 col-lg-5 col-xl-5">
+                                                <div class="form-group dateRangeSelector">
+                                                    <span class="mr-3">From: </span>
+                                                    <div id="start-date" class="input-daterange position-relative">
+                                                        <input type="text" id="startDate" class="form-control text-left mb-0" placeholder="">
+                                                        <svg id="fa-1" class="icon-calendar" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M6 9V11H4V9H6ZM10 9V11H8V9H10ZM14 9V11H12V9H14ZM16 2C16.5304 2 17.0391 2.21071 17.4142 2.58579C17.7893 2.96086 18 3.46957 18 4V18C18 18.5304 17.7893 19.0391 17.4142 19.4142C17.0391 19.7893 16.5304 20 16 20H2C0.89 20 0 19.1 0 18V4C0 3.46957 0.210714 2.96086 0.585786 2.58579C0.960859 2.21071 1.46957 2 2 2H3V0H5V2H13V0H15V2H16ZM16 18V7H2V18H16ZM6 13V15H4V13H6ZM10 13V15H8V13H10ZM14 13V15H12V13H14Z" fill="#606262"/>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-5 col-md-5 col-lg-5 col-xl-5">
+                                                <div class="form-group dateRangeSelector">
+                                                    <span class="mr-3">To: </span>
+                                                    <div id="end-date" class="input-daterange position-relative">
+                                                        <input type="text" id="endDate" class="form-control text-left mb-0" placeholder="">
+                                                        <svg id="fa-1" class="icon-calendar" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M6 9V11H4V9H6ZM10 9V11H8V9H10ZM14 9V11H12V9H14ZM16 2C16.5304 2 17.0391 2.21071 17.4142 2.58579C17.7893 2.96086 18 3.46957 18 4V18C18 18.5304 17.7893 19.0391 17.4142 19.4142C17.0391 19.7893 16.5304 20 16 20H2C0.89 20 0 19.1 0 18V4C0 3.46957 0.210714 2.96086 0.585786 2.58579C0.960859 2.21071 1.46957 2 2 2H3V0H5V2H13V0H15V2H16ZM16 18V7H2V18H16ZM6 13V15H4V13H6ZM10 13V15H8V13H10ZM14 13V15H12V13H14Z" fill="#606262"/>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                                                <button type="button" class="btn btn-success">Go</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-1 col-lg-1 col-xl-1 text-right pr-0">
+                                        <button  class="bg-transparent p-0 btn btn-sm mt-3"><img src="image/icons/refresh-datatable.png" alt="Refersh Table"/></button>
+                                    </div>
+                                </div>
+                            </div>
                             <table
                              id="b-table" 
                              data-toggle="table" 
@@ -210,127 +305,36 @@
                              class="table borderlessTable">
                                 <thead>
                                     <tr class="text-fontsize">
-                                        <th class="w-180" data-field="name" data-sortable="true" data-filter-control="input">Name</th>
-                                        <th class="w-185" data-field="sent" data-sortable="true" data-filter-control="select">Sent To</th>
-                                        <th class="w-170" data-field="date" data-sortable="true" data-filter-control="select">Date Sent</th>
-                                        <th class="w-170" data-field="expiration" data-sortable="true" data-filter-control="select">Expiration</th>
-                                        <th class="w-170" data-field="status">Status</th>
-                                        <th class="w-45" data-field="checkbox">
-                                            <input type="checkbox" class="select-all checkbox" name="select-all" />
-                                        </th>
+                                        <th data-field="teamMember">Team Member</th>
+                                        <th  data-field="packagesEmailed">Packages Emailed</th>
+                                        <th data-field="packagesTexted">Packages Texted</th>
+                                        <th data-field="assignedLeads">Assigned Leads</th>
+                                        <th data-field="leadsContacted">Leads Contacted</th>
+                                        <th data-field="contactRatio">Contact Ratio</th>
+                                        <th data-field="logInPeriod">Log In's For Peirod</th>
+                                        <th data-field="lastLogin">Last Log In</th>
                                     </tr>
                                 </thead>
                                 <tbody class="text-15">
                                     <tr>
-                                        <td>
-                                            <span class="mr-2"><img src="image/icons/box-datatable.png" alt="box" /></span>
-                                            <span class="mr-2">Skyfall</span>
-                                            <span class="ml-1"><img src="image/icons/view-datatable.png" alt="view" /></span>
-                                        </td>
-                                        <td>
-                                            <div class="d-flex justify-content-between">
-                                                <div class="display-grid">
-                                                    <span>Alex Norbort</span>
-                                                    <span>(alex2norbert@gmail.com)</span>
-                                                </div>
-                                                <div class="p-3 d-flex">
-                                                    <span><img src="image/icons/message-datatable.png" alt="message" /></span>
-                                                    <span class="ml-2"><img src="image/icons/right-arrow-datatable.png" alt="right" /></span>
-                                                    <span class="ml-2"><img src="image/icons/view-datatable.png" alt="view" /></span>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>3/12/2021</div>
-                                            <div>11:38 AM</div>
-                                        </td>
-                                        <td>
-                                            <div class=" align-items-center">
-                                                <span>Never Expires </span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <span class="span-progress">Sent | Resend</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <input type="checkbox" class="select-item checkbox" name="select-item" value="1000" />
-                                        </td>
+                                        <td>Alex Norbert</td>
+                                        <td>2</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0%</td>
+                                        <td>7</td>
+                                        <td>Today</td>
                                     </tr>
                                     <tr>
-                                        <td>
-                                            <span class="mr-2"><img src="image/icons/box-datatable.png" alt="box" /></span>
-                                            <span class="mr-2">Skyfall</span>
-                                            <span class="ml-1"><img src="image/icons/view-datatable.png" alt="view" /></span>
-                                        </td>
-                                        <td>
-                                            <div class="d-flex justify-content-between">
-                                                <div class="display-grid">
-                                                    <span>Alex Norbort</span>
-                                                    <span>(alex2norbert@gmail.com)</span>
-                                                </div>
-                                                <div class="p-3 d-flex">
-                                                    <span><img src="image/icons/message-datatable.png" alt="message" /></span>
-                                                    <span class="ml-2"><img src="image/icons/right-arrow-datatable.png" alt="right" /></span>
-                                                    <span class="ml-2"><img src="image/icons/view-datatable.png" alt="view" /></span>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>3/12/2021</div>
-                                            <div>11:38 AM</div>
-                                        </td>
-                                        <td>
-                                            <div class=" align-items-center">
-                                                <span>Never Expires </span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <span class="span-progress">Sent | Resend</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <input type="checkbox" class="select-item checkbox" name="select-item" value="1000" />
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <span class="mr-2"><img src="image/icons/box-datatable.png" alt="box" /></span>
-                                            <span class="mr-2">Skyfall</span>
-                                            <span class="ml-1"><img src="image/icons/view-datatable.png" alt="view" /></span>
-                                        </td>
-                                        <td>
-                                            <div class="d-flex justify-content-between">
-                                                <div class="display-grid">
-                                                    <span>Alex Norbort</span>
-                                                    <span>(alex2norbert@gmail.com)</span>
-                                                </div>
-                                                <div class="p-3 d-flex">
-                                                    <span><img src="image/icons/message-datatable.png" alt="message" /></span>
-                                                    <span class="ml-2 align-middle"><img src="image/icons/right-arrow-datatable.png" alt="right" /></span>
-                                                    <span class="ml-2"><img src="image/icons/view-datatable.png" alt="view" /></span>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>3/12/2021</div>
-                                            <div>11:38 AM</div>
-                                        </td>
-                                        <td>
-                                            <div class=" align-items-center">
-                                                <span>Never Expires </span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <span class="span-progress">Sent | Resend</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <input type="checkbox" class="select-item checkbox" name="select-item" value="1000" />
-                                        </td>
+                                        <td>John Doe</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0%</td>
+                                        <td>1</td>
+                                        <td>8 days ago</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -345,8 +349,9 @@
         <script src="plugin/fontawesome/all.min.js"></script>
         <script src="plugin/bootstrap/popper.min.js"></script>
         <script src="plugin/bootstrap/bootstrap.js"></script>
+        <script src="plugin/bootstrap-datepicker/bootstrap-datepicker.js"></script>
         <script src="plugin/bootstrap-table/bootstrap-table.min.js"></script>
         <script src="js/common.js"></script>
-        <script src="js/history.js"></script>
+        <script src="js/user-activity.js"></script>
     </body>
 </html>

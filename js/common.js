@@ -14,4 +14,7 @@ jQuery( document ).ready(function($) {
             $(this).addClass("active");
         }
     });
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
 });

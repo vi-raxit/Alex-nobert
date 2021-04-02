@@ -1,0 +1,12 @@
+/*
+*  Dashboard users Style
+*/
+
+@media only screen and (max-width: 600px) {
+  .button-res button{
+    width: 100%;
+    }
+  .button-res > .btn-warning{
+    margin-bottom: 10px;
+    }
+  }  

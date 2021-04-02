@@ -44,17 +44,6 @@
   fill: #5E9331;
   margin-right: 5px;
 }
-.sortByLetter-container {
-  letter-spacing: 5px;
-  width: fit-content;
-  background-color: #F7F7F7;
-  font-weight: 700;
-  text-transform: uppercase;
-  padding: 0.5rem;
-}
-.sortByLetter-container a {
-  color: #000000;
-}
 .ml-8 {
   margin-left: 8px;
 }

@@ -1,0 +1,47 @@
+/*
+* Admin History Style
+*/
+.circle-icon {
+  color: #4D8943;
+  font-size: 8px;
+}
+.span-progress {
+  float: left;
+  margin-right:5px;
+}
+.w-180 {
+  min-width: 180px;
+}
+.w-185 {
+  min-width: 185px;
+}
+.width-100 {
+  min-width: 100px !important;
+}
+.w-45 {
+  min-width: 45px;
+}
+.width-25 {
+  width: 25px;
+}
+.display-grid {
+  display: grid !important
+}
+.file-views-icons img {
+ width: 12px;
+}
+@media (min-width: 731px) {
+  .dateRangeSelector {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 731px) {
+  .wr-100 {
+    width: 100%;
+  }
+  .wr-100 .dropdown-toggle {
+    width: 100%;
+  }
+}

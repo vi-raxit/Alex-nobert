@@ -1,0 +1,18 @@
+/*
+* Admin History Style
+*/
+@media (min-width: 731px) {
+  .dateRangeSelector {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 731px) {
+  .wr-100 {
+    width: 100%;
+  }
+  .wr-100 .dropdown-toggle {
+    width: 100%;
+  }
+}
