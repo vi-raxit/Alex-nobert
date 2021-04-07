@@ -1,3 +1,4 @@
+// ** Dashboard Package Jquery ** //
 jQuery( document ).ready(function($)
  {
     var ctx2 = document.getElementById('remainingPackages');

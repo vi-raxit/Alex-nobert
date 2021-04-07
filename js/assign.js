@@ -1,4 +1,4 @@
-/* Address Book Javascript */
+/* Assign Javascript */
 jQuery( document ).ready(function($) {
     // checkbox select all or cancel
     $("input.select-all").click(function () {
@@ -31,11 +31,4 @@ jQuery( document ).ready(function($) {
             $(".toolbar-right .btn.btn-warning").addClass("d-none")
         }
     }
-
-    // $(function(){
-    //     $("#filter-1 .dropdown-menu a").click(function(){
-    //       $("#filter-1 .btn:first-child").text($(this).text());
-    //       $("#filter-1 .btn:first-child").val($(this).text());
-    //    });
-    // });
 });

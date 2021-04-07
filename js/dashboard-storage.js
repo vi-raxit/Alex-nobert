@@ -1,3 +1,4 @@
+// ** Dashboard Storage Jquery **//
 jQuery( document ).ready(function($)
  {
     var ctx1 = document.getElementById('skyfall');

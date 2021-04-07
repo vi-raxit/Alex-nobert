@@ -1,271 +1,436 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Dashboard</title>
-    <!-- Styles -->
-    <link href="plugin/bootstrap/bootstrap.css" rel="stylesheet" />
-    <link href="plugin/bootstrap-table/bootstrap-table.min.css" rel="stylesheet" />
-    <link href="CSS/styles.css" rel="stylesheet" />
-    <link href="CSS/responsive.css" rel="stylesheet" />
-    <link href="CSS/my-account.css" rel="stylesheet" />
-</head>
-
-<body class="sidebar-fixed">
-    <div id="containerMain">
-        <div id="containerMain_nav">
-            <nav class="sidebar accordion sidebar-dark" id="sidenavAccordion">
-                <div class="sidebar-menu">
-                    <!-- Logo -->
-                    <div class="nav">
-                        <a class="navbar-brand" href="index.html" title="Logo">
-                            <img src="image/logo.png" class="hideMain-logo" alt="Send Your Media">
-                            <img src="image/logo-small.png" class="toogledLogo" alt="Send Your Media">
-                        </a>
-                    </div>
-                    <div class="nav">
-                        <a class="nav-link" href="email-packages.html" title="Email Packages">
-                            <div class="sidebar-link-icon"><img src="image/icons/email-package.png" alt="Email Packages"></div>
-                            <span>Email Packages</span>
-                        </a>
-                    </div>
-                    <div class="nav">
-                        <a class="nav-link" href="text-packages.html">
-                            <div class="sidebar-link-icon"><img src="image/icons/textsms-package.png" alt="Text Packages"></div>
-                            <span>Text Packages</span>
-                        </a>
-                    </div>
-                    <div class="nav">
-                        <a class="nav-link" href="#1">
-                            <div class="sidebar-link-icon"><img src="image/icons/link_package.png" alt="Link to Package"></div>
-                            <span>Link to Package</span>
-                        </a>
-                    </div>
-                    <div class="nav">
-                        <a class="nav-link" href="#2">
-                            <div class="sidebar-link-icon"><img src="image/icons/facebook_package.png" alt="Post a Package"></div>
-                            <span>Post a Package</span>
-                        </a>
-                    </div>
-                    <div class="nav">
-                        <a class="nav-link" href="#3">
-                            <div class="sidebar-link-icon"><img src="image/icons/twitter_package.png" alt="Post a Package"></div>
-                            <span>Post a Package</span>
-                        </a>
-                    </div>
-                    <div class="nav">
-                        <a class="nav-link" href="#4">
-                            <div class="sidebar-link-icon"><img src="image/icons/LinkedIn.png" alt="Post a Package">
-                            </div>
-                            <span>Post a Package</span>
-                        </a>
-                    </div>
-
-                    <div class="pl-3 pr-3">
-                        <hr>
-                    </div>
-
-                    <div class="nav">
-                        <a class="nav-link" href="#5">
-                            <div class="sidebar-link-icon"><img src="image/icons/email-inbox.png" alt="Inbox"></div>
-                            <span>Inbox</span>
-                        </a>
-                    </div>
-                    <div class="nav">
-                        <a class="nav-link" href="#6">
-                            <div class="sidebar-link-icon"><img src="image/icons/textsms_messages.png" alt="Messages">
-                            </div>
-                            <span>Messages</span>
-                        </a>
-                    </div>
-                    <div class="nav">
-                        <a class="nav-link" href="#7">
-                            <div class="sidebar-link-icon"><img src="image/icons/Templates.png" alt="Templates"></div>
-                            <span>Templates</span>
-                        </a>
-                    </div>
-                    <div class="nav">
-                        <a class="nav-link" href="#8">
-                            <div class="sidebar-link-icon"><img src="image/icons/sequence.png" alt="Sequences"></div>
-                            <span>Sequences</span>
-                        </a>
-                    </div>
-                    <div class="nav">
-                        <a class="nav-link" href="#9">
-                            <div class="sidebar-link-icon"><img src="image/icons/Tasks.png" alt="Tasks"></div>
-                            <span>Tasks</span>
-                        </a>
-                    </div>
-
-                    <div class="pl-3 pr-3">
-                        <hr>
-                    </div>
-
-                    <div class="nav">
-                        <a class="nav-link" href="#10">
-                            <div class="sidebar-link-icon"><img src="image/icons/history.png" alt="History"></div>
-                            <span>History</span>
-                        </a>
-                    </div>
-                    <div class="nav">
-                        <a class="nav-link" href="#11">
-                            <div class="sidebar-link-icon"><img src="image/icons/Templates.png" alt="Template Log">
-                            </div>
-                            <span>Template Log</span>
-                        </a>
-                    </div>
-                    <div class="nav">
-                        <a class="nav-link" href="#12">
-                            <div class="sidebar-link-icon"><img src="image/icons/activity_log.png" alt="Activity Log">
-                            </div>
-                            <span>Activity Log</span>
-                        </a>
-                    </div>
-                    <div class="nav">
-                        <a class="nav-link" href="#13">
-                            <div class="sidebar-link-icon"><img src="image/icons/address_book.png" alt="Contacts"></div>
-                            <span>Contacts</span>
-                        </a>
-                    </div>
-
-                    <div class="pl-3 pr-3">
-                        <hr>
-                    </div>
-
-                    <div class="nav">
-                        <a class="nav-link" href="#14">
-                            <div class="sidebar-link-icon"><img src="image/icons/admin_panel.png" alt="Admin Panel">
-                            </div>
-                            <span>Admin Panel</span>
-                        </a>
-                    </div>
-
-                    <div class="nav">
-                        <a class="nav-link" href="#15">
-                            <div class="sidebar-link-icon"><img src="image/icons/my_account_circle.png" alt="My Account"></div>
-                            <span>My Account</span>
-                        </a>
-                    </div>
-
-                    <div class="nav hideIn-mobile">
-                        <a class="nav-link sidebarToggle" href="#16">
-                            <div class="sidebar-link-icon">
-                                <img src="image/icons/arrow_open_side_bar.png" class="show-sidebar-icon" alt="Show Menu">
-                                <img src="image/icons/arrow_back-24px.png" class="hide-sidebar-icon" alt="Hide Menu">
-                            </div>
-                            <span>Hide Menu</span>
-                        </a>
-                    </div>
-                </div>
-            </nav>
-        </div>
-        <div id="containerMain_content">
-            <header>
-                <!-- Mobile Top Nav-->
-                <nav class="sidebar-topnav sidebar-dark mobile-topnav shadow-sm navbar navbar-expand navbar-light box-shadow">
-                    <!-- Mobile Logo -->
-                    <a class="nav-link navbar-brand mobile-logo" href="index.html">
-                        <img src="image/logo-small.png" class="" alt="Send Your Media">
-                    </a>
-                    <!-- Navbar Search-->
-                    <form class="d-md-inline-block form-inline ml-auto mr-0 my-2 my-md-0">
-                        <div class="input-group">
-                            <input class="form-control border-0 bg-light-grey" type="text" placeholder="Search..." aria-label="Search" />
-                            <div class="input-group-append">
-                                <button class="input-group-text bg-light-grey border-0"><i class="fas fa-search"></i></button>
-                            </div>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Dashboard</title>
+        <!-- Styles -->
+        <link href="plugin/bootstrap/bootstrap.css" rel="stylesheet" />
+        <link href="plugin/bootstrap-datepicker/bootstrap-datepicker.css" rel="stylesheet" />
+        <link href="plugin/bootstrap-datepicker/bootstrap-datepicker.css" rel="stylesheet" />
+        <link href="plugin/spectrum/spectrum.css" rel="stylesheet" />
+        <link href="CSS/styles.css" rel="stylesheet" />
+        <link href="CSS/responsive.css" rel="stylesheet" />
+        <link href="CSS/my-account.css" rel="stylesheet" />
+    </head>
+    <body class="sidebar-fixed">
+        <div id="containerMain">
+            <div id="containerMain_nav">
+                <nav class="sidebar accordion sidebar-dark" id="sidenavAccordion">
+                    <div class="sidebar-menu">
+                        <!-- Logo -->
+                        <div class="nav">
+                            <a class="navbar-brand" href="index.html" title="Logo">
+                                <img src="image/logo.png" class="hideMain-logo" alt="Send Your Media">
+                                <img src="image/logo-small.png" class="toogledLogo" alt="Send Your Media">
+                            </a>
                         </div>
-                    </form>
-                    <button class="btn btn-link btn order-1 order-lg-0 text-white sidebarToggle"><i class="fas fa-bars"></i></button>
-                    <!-- Navbar-->
+                        <div class="nav">
+                            <a class="nav-link" href="email-packages.html" title="Email Packages">
+                                <div class="sidebar-link-icon"><img src="image/icons/email-package.png" alt="Email Packages"></div>
+                                <span>Email Packages</span>
+                            </a>
+                        </div>
+                        <div class="nav">
+                            <a class="nav-link" href="text-packages.html">
+                                <div class="sidebar-link-icon"><img src="image/icons/textsms-package.png" alt="Text Packages"></div>
+                                <span>Text Packages</span>
+                            </a>
+                        </div>
+                        <div class="nav">
+                            <a class="nav-link" href="#1">
+                                <div class="sidebar-link-icon"><img src="image/icons/link_package.png" alt="Link to Package"></div>
+                                <span>Link to Package</span>
+                            </a>
+                        </div>
+                        <div class="nav">
+                            <a class="nav-link" href="#2">
+                                <div class="sidebar-link-icon"><img src="image/icons/facebook_package.png" alt="Post a Package"></div>
+                                <span>Post a Package</span>
+                            </a>
+                        </div>
+                        <div class="nav">
+                            <a class="nav-link" href="#3">
+                                <div class="sidebar-link-icon"><img src="image/icons/twitter_package.png" alt="Post a Package"></div>
+                                <span>Post a Package</span>
+                            </a>
+                        </div>
+                        <div class="nav">
+                            <a class="nav-link" href="#4">
+                                <div class="sidebar-link-icon"><img src="image/icons/LinkedIn.png" alt="Post a Package"></div>
+                                <span>Post a Package</span>
+                            </a>
+                        </div>
+    
+                        <div class="pl-3 pr-3">
+                            <hr>
+                        </div>
+    
+                        <div class="nav">
+                            <a class="nav-link" href="#5">
+                                <div class="sidebar-link-icon"><img src="image/icons/email-inbox.png" alt="Inbox"></div>
+                                <span>Inbox</span>
+                            </a>
+                        </div>
+                        <div class="nav">
+                            <a class="nav-link" href="#6">
+                                <div class="sidebar-link-icon"><img src="image/icons/textsms_messages.png" alt="Messages"></div>
+                                <span>Messages</span>
+                            </a>
+                        </div>
+                        <div class="nav">
+                            <a class="nav-link" href="#7">
+                                <div class="sidebar-link-icon"><img src="image/icons/Templates.png" alt="Templates"></div>
+                                <span>Templates</span>
+                            </a>
+                        </div>
+                        <div class="nav">
+                            <a class="nav-link" href="#8">
+                                <div class="sidebar-link-icon"><img src="image/icons/sequence.png" alt="Sequences"></div>
+                                <span>Sequences</span>
+                            </a>
+                        </div>
+                        <div class="nav">
+                            <a class="nav-link" href="#9">
+                                <div class="sidebar-link-icon"><img src="image/icons/Tasks.png" alt="Tasks"></div>
+                                <span>Tasks</span>
+                            </a>
+                        </div>
+    
+                        <div class="pl-3 pr-3">
+                            <hr>
+                        </div>
+                        
+                        <div class="nav">
+                            <a class="nav-link" href="#10">
+                                <div class="sidebar-link-icon"><img src="image/icons/history.png" alt="History"></div>
+                                <span>History</span>
+                            </a>
+                        </div>
+                        <div class="nav">
+                            <a class="nav-link" href="#11">
+                                <div class="sidebar-link-icon"><img src="image/icons/Templates.png" alt="Template Log"></div>
+                                <span>Template Log</span>
+                            </a>
+                        </div>
+                        <div class="nav">
+                            <a class="nav-link" href="#12">
+                                <div class="sidebar-link-icon"><img src="image/icons/activity_log.png" alt="Activity Log"></div>
+                                <span>Activity Log</span>
+                            </a>
+                        </div>
+                        <div class="nav">
+                            <a class="nav-link" href="#13">
+                                <div class="sidebar-link-icon"><img src="image/icons/address_book.png" alt="Contacts"></div>
+                                <span>Contacts</span>
+                            </a>
+                        </div>
+    
+                        <div class="pl-3 pr-3">
+                            <hr>
+                        </div>
+    
+                        <div class="nav">
+                            <a class="nav-link" href="#14">
+                                <div class="sidebar-link-icon"><img src="image/icons/admin_panel.png" alt="Admin Panel"></div>
+                                <span>Admin Panel</span>
+                            </a>
+                        </div>
+    
+                        <div class="nav">
+                            <a class="nav-link" href="#15">
+                                <div class="sidebar-link-icon"><img src="image/icons/my_account_circle.png" alt="My Account"></div>
+                                <span>My Account</span>
+                            </a>
+                        </div>
+    
+                        <div class="nav hideIn-mobile">
+                            <a class="nav-link sidebarToggle" href="#16">
+                                <div class="sidebar-link-icon">
+                                    <img src="image/icons/arrow_open_side_bar.png" class="show-sidebar-icon" alt="Show Menu">
+                                    <img src="image/icons/arrow_back-24px.png" class="hide-sidebar-icon" alt="Hide Menu">
+                                </div>
+                                <span>Hide Menu</span>
+                            </a>
+                        </div>
+                    </div>
                 </nav>
-                <!-- Mobile Top Nav End-->
-                <nav class="sidebar-topnav shadow-sm navbar navbar-expand navbar-light box-shadow bg-light">
-                    <!-- Breadcrumb-->
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html"></a>My Account</a></li>
-                        <span class="pl-2 pr-2">
-                            <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.589996 10.58L5.17 6L0.589996 1.41L2 0L8 6L2 12L0.589996 10.58Z" fill="black" />
-                            </svg>
-                        </span>
-                        <li class="breadcrumb-item active">Account Summary</li>
-                    </ol>
-                    <!-- Navbar Search-->
-                    <form class="d-none hideIn-mobile d-md-inline-block form-inline ml-auto mr-0 my-2 my-md-0">
-                        <div class="input-group">
-                            <input class="form-control border-0 bg-light-grey" type="text" placeholder="Search..." aria-label="Search" />
-                            <div class="input-group-append">
-                                <button class="input-group-text bg-light-grey border-0"><i class="fas fa-search"></i></button>
+            </div>
+            <div id="containerMain_content">
+                <header>
+                    <!-- Mobile Top Nav-->
+                    <nav class="sidebar-topnav sidebar-dark mobile-topnav shadow-sm navbar navbar-expand navbar-light box-shadow">
+                        <!-- Mobile Logo -->
+                        <a class="nav-link navbar-brand mobile-logo" href="index.html">
+                            <img src="image/logo-small.png" class="" alt="Send Your Media">
+                        </a>
+                        <!-- Navbar Search-->
+                        <form class="d-md-inline-block form-inline ml-auto mr-0 my-2 my-md-0">
+                            <div class="input-group">
+                                <input class="form-control border-0 bg-light-grey" type="text" placeholder="Search..." aria-label="Search" />
+                                <div class="input-group-append">
+                                    <button class="input-group-text bg-light-grey border-0"><i class="fas fa-search"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                        <button class="btn btn-link btn order-1 order-lg-0 text-white sidebarToggle"><i class="fas fa-bars"></i></button>
+                        <!-- Navbar-->
+                    </nav>
+                    <!-- Mobile Top Nav End-->
+                    <nav class="sidebar-topnav shadow-sm navbar navbar-expand navbar-light box-shadow bg-light">
+                        <!-- Breadcrumb-->
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html"></a>Email Packages</a></li>
+                            <span class="pl-2 pr-2">
+                                <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.589996 10.58L5.17 6L0.589996 1.41L2 0L8 6L2 12L0.589996 10.58Z" fill="black"/>
+                                </svg>
+                            </span>
+                            <li class="breadcrumb-item active">Add Contents</li>
+                        </ol>
+                    
+                        <!-- Navbar Search-->
+                        <form class="d-none hideIn-mobile d-md-inline-block form-inline ml-auto mr-0 my-2 my-md-0">
+                            <div class="input-group">
+                                <input class="form-control border-0 bg-light-grey" type="text" placeholder="Search..." aria-label="Search" />
+                                <div class="input-group-append">
+                                    <button class="input-group-text bg-light-grey border-0"><i class="fas fa-search"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                        <button class="input-group-text bg-none border-0"><i class="far fa-question-circle w-20 h-20"></i></button>
+                        <!-- Navbar-->
+                    </nav>
+                </header>
+                <main>
+                    <!-- Page Content -->
+                    <section>
+                        <div class="container-inner pt-3 pb-3">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                    <img src="image/logo.png" class="my-account-logo pb-4" alt="Send Your Media">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control rounded-0" id="companyName" aria-describedby="companyName" placeholder="Company Name *">
+                                    </div>
+                                    <div class="form-inline align-items-baseline">
+                                        <div class="col-3 col-sm-3 col-md-2 col-lg-2">
+                                            <div class="row">
+                                                <select class="form-control form-group rounded-0 w-100">
+                                                    <option value="" selected disabled>+1</option>
+                                                    <option value="+1">+1</option>
+                                                    <option value="+2">+2</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-9 col-sm-9 col-md-10 col-lg-10 pr-0">
+                                            <div class="form-group w-100">
+                                                <input type="text" class="form-control rounded-0 w-100" id="companyPhone" aria-describedby="companyPhone" placeholder="Company Phone">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control rounded-0" id="address" aria-describedby="address" placeholder="Address *">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control rounded-0" id="address2" aria-describedby="address2" placeholder="Address 2 *">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control rounded-0" id="city" aria-describedby="city" placeholder="City *">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control rounded-0" id="state" aria-describedby="state" placeholder="State *">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control rounded-0" id="zip" aria-describedby="zip" placeholder="Zip *">
+                                    </div>
+                                    <div class="form-group">
+                                        <select class="form-control rounded-0">
+                                            <option value="" selected disabled>Time Zone *</option>
+                                            <option value="time-zone-1">Time Zone-1</option>
+                                            <option value="time-zone-2">Time Zone-2</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <select class="form-control rounded-0">
+                                            <option value="" selected disabled>Time Format *</option>
+                                            <option value="time-format-1">Time Format-1</option>
+                                            <option value="time-format-2">Time Format-2</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <select class="form-control rounded-0">
+                                            <option value="" selected disabled>Date Format *</option>
+                                            <option value="date-format-1">Date Format-1</option>
+                                            <option value="date-format-2">Date Format-2</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control rounded-0" id="linkedIn" aria-describedby="linkedIn" placeholder="LinkedIn">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control rounded-0" id="twitter" aria-describedby="twitter" placeholder="Twitter">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control rounded-0" id="facebook" aria-describedby="facebook" placeholder="Facebook">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control rounded-0" id="website" aria-describedby="website" placeholder="Website">
+                                    </div>
+                                    <!-- File Drop/Upload -->
+                                    <div class="fileUplaod-container text-grey">
+                                        <div id="basic_drop_zone1" class="dropZone p-4">
+                                            <div class="text-center">
+                                                <svg width="25" height="29" viewBox="0 0 25 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M22.5 22.5V26.5H2.5V22.5H0.5V26.5C0.5 27.0304 0.710714 27.5391 1.08579 27.9142C1.46086 28.2893 1.96957 28.5 2.5 28.5H22.5C23.0304 28.5 23.5391 28.2893 23.9142 27.9142C24.2893 27.5391 24.5 27.0304 24.5 26.5V22.5H22.5Z" fill="#E0E0E0"/>
+                                                    <path d="M22.5 12.5L21.09 11.09L13.5 18.67V0.5H11.5V18.67L3.91 11.09L2.5 12.5L12.5 22.5L22.5 12.5Z" fill="#E0E0E0"/>
+                                                </svg>
+                                                <div class="ml-2 dropBox">
+                                                    <h4 class="text-14">Drop your CSV or XLS here</h4>
+                                                    <p class="text-12">
+                                                        Acceptable file types are .png .jpg
+                                                        Minimum image size to avoid
+                                                        pixelation (600 x 585 pixels)
+                                                    </p>
+                                                </div>
+                                                <div id="basic_message1"></div>
+                                                <div id="basic_progress1"></div>
+                                            </div>
+                                        </div>
+                                        <span class="d-flex justify-content-center mt-4 mb-4">Or</span>
+                                        <div class="d-flex justify-content-center mb-2">
+                                            <input type="file" multiple="true" id="fileUpload1" hidden accept=".xlsx, .xls, .csv"/>
+                                            <label class="fileUpload-label btn btn-light btn-action" for="fileUpload1">Browse</label>
+                                        </div>
+                                    </div>
+                                    <!-- File Drop/Upload End -->
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                    <div class="contact-info-container">
+                                        <h4 class="text-14">Contact Information</h4>
+                                        <p class="text-12 text-grey">Photo, name and phone number appear on the package contact form.</p>
+                                        <div class="profile-image pt-3 pb-3">
+                                            <img src="image/plceholder-profile-pic-1.png" class="img-fluid" alt="profile1">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control rounded-0" id="firstName" aria-describedby="firstName" placeholder="First Name *">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control rounded-0" id="lastName" aria-describedby="lastName" placeholder="Last Name *">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control rounded-0" id="jobTitle" aria-describedby="jobTitle" placeholder="Job Title">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control rounded-0 " id="extention" aria-describedby="extention" placeholder="Extention">
+                                    </div>
+                                    <div class="form-inline align-items-baseline">
+                                        <div class="col-3 col-sm-3 col-md-2 col-lg-2">
+                                            <div class="row">
+                                                <select class="form-control form-group rounded-0 w-100">
+                                                    <option value="" selected disabled>+1</option>
+                                                    <option value="+1">+1</option>
+                                                    <option value="+2">+2</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-9 col-sm-9 col-md-10 col-lg-10 pr-0">
+                                            <div class="form-group w-100">
+                                                <input type="text" class="form-control rounded-0 w-100" id="directNumber" aria-describedby="directNumber" placeholder="Direct Number">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-inline align-items-baseline">
+                                        <div class="col-3 col-sm-3 col-md-2 col-lg-2">
+                                            <div class="row">
+                                                <select class="form-control form-group rounded-0 w-100">
+                                                    <option value="" selected disabled>+1</option>
+                                                    <option value="+1">+1</option>
+                                                    <option value="+2">+2</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-9 col-sm-9 col-md-10 col-lg-10 pr-0">
+                                            <div class="form-group w-100">
+                                                <input type="text" class="form-control rounded-0 w-100" id="mobileNumber" aria-describedby="mobileNumber" placeholder="Mobile Number">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control rounded-0" id="emailAddress" aria-describedby="emailAddress" placeholder="Email Address *">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control rounded-0" id="linkedIn" aria-describedby="linkedIn" placeholder="LinkedIn">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control rounded-0" id="oldPassword" aria-describedby="oldPassword" placeholder="Old Password">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control rounded-0" id="newPassword" aria-describedby="newPassword" placeholder="New Password">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control rounded-0" id="confirmPassword" aria-describedby="confirmPassword" placeholder="Confirm Password">
+                                    </div>
+                                    <!-- File Drop/Upload -->
+                                    <div class="fileUplaod-container text-grey">
+                                        <div id="basic_drop_zone2" class="dropZone p-4">
+                                            <div class="text-center">
+                                                <svg width="25" height="29" viewBox="0 0 25 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M22.5 22.5V26.5H2.5V22.5H0.5V26.5C0.5 27.0304 0.710714 27.5391 1.08579 27.9142C1.46086 28.2893 1.96957 28.5 2.5 28.5H22.5C23.0304 28.5 23.5391 28.2893 23.9142 27.9142C24.2893 27.5391 24.5 27.0304 24.5 26.5V22.5H22.5Z" fill="#E0E0E0"/>
+                                                    <path d="M22.5 12.5L21.09 11.09L13.5 18.67V0.5H11.5V18.67L3.91 11.09L2.5 12.5L12.5 22.5L22.5 12.5Z" fill="#E0E0E0"/>
+                                                </svg>
+                                                <div class="ml-2 dropBox">
+                                                    <h4 class="text-14">Drop your photo here</h4>
+                                                    <p class="text-12">
+                                                        Acceptable file types are .png .jpg
+                                                        Minimum image size to avoid
+                                                        pixelation (600 x 600 pixels)
+                                                    </p>
+                                                </div>
+                                                <div id="basic_message2"></div>
+                                                <div id="basic_progress2"></div>
+                                            </div>
+                                        </div>
+                                        <span class="d-flex justify-content-center mt-4 mb-4">Or</span>
+                                        <div class="d-flex justify-content-center mb-2">
+                                            <input type="file" multiple="true" id="fileUpload2" hidden accept=".xlsx, .xls, .csv"/>
+                                            <label class="fileUpload-label btn btn-light btn-action" for="fileUpload2">Browse</label>
+                                        </div>
+                                    </div>
+                                    <!-- File Drop/Upload End -->
+                                    <div class="d-flex justify-content-center mb-2"><a href="#">Reset to default image</a></div>
+                                </div>
+
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                                    <div class="mb-2">
+                                        <h4 class="text-black text-14">Brand Color</h4>
+                                        <a href="#">View your package</a>
+                                    </div>
+                                    <input type='text' id="custom" />
+                                </div>
+                                <div class="d-block w-100 pl-3 mt-4 text-left">
+                                    <button class="btn btn-action btn-success">Save</button>
+                                    <button class="btn btn-action btn-light ml-3">Cancel</button>
+                                </div>
                             </div>
                         </div>
-                    </form>
-                    <button class="input-group-text bg-none border-0"><i class="far fa-question-circle w-20 h-20"></i></button>
-                    <!-- Navbar-->
-                </nav>
-            </header>
-            <main class="pt-4 pb-4">
-                <!-- Page Content -->
-                <section class="container-fluid">
-                    <div class="card pb-4 min-height-100 p-4">
-                        <div>
-                            <h4 class="mb-0 d-flex align-items-center">Subscription</h4>
-                        </div>
-                        <ul class="list-group text-16">
-                            <li class="list-group-item border-0"><strong>Plan :</strong> Business</li>
-                            <li class="list-group-item border-0"><strong>Status :</strong> active</li>
-                            <li class="list-group-item border-0"><strong>Total Amount :</strong> $0.00/Year</li>
-                            <li class="list-group-item border-0"><strong>Next Invoice :</strong> Sunday, March 13,2022</li>
-                        </ul>
-                        <div class="py-4 button-res">
-                        <button type="button" class="btn btn-warning btn-action mr-2"><i class="fa fa-times-circle mr-2" aria-hidden="true"></i>cancel my subscription</button>
-                        <button type="button" class="btn btn-success btn-action"><i class="fa fa-cog mr-2" aria-hidden="true"></i>update billing info</button>
-                        </div>
-                        <div class="p-2 border-top">
-                            <h4 class="mb-0 d-flex align-items-center">Invoices</h4>
-                        </div>
-                        <table id="b-table" data-toggle="table" class="table borderlessTable">
-                            <thead>
-                                <tr>
-                                    <th data-field="invoices" data-filter-control="input">Invoice #</th>
-                                    <th data-field="date" data-filter-control="input">Date</th>
-                                    <th data-field="totalDue" data-filter-control="input">Total Due</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <span>1132</span>
-                                    </td>
-                                    <td>
-                                       <span>Friday,March 12,2021</span>
-                                    </td>
-                                    <td>
-                                        <span>$0.00</span>
-                                    </td>
-                                </tr>    
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
-                <!-- Page Content End-->
-            </main>
+                    </section>
+                    <!-- Page Content End-->
+                </main>  
+            </div>
         </div>
-    </div>
-    <!-- Scritps -->
-
-    <script src="plugin/jQuery/jquery-3.6.0.min.js"></script>
-    <script src="plugin/fontawesome/all.min.js"></script>
-    <script src="plugin/bootstrap/popper.min.js"></script>
-    <script src="plugin/bootstrap/bootstrap.js"></script>
-    <script src="plugin/bootstrap-table/bootstrap-table.min.js"></script>
-    <script src="js/common.js"></script>
-    <script src="js/my-account.js"></script>
-</body>
-
+        <!-- Scritps -->
+        <script src="plugin/jQuery/jquery-3.6.0.slim.min.js"></script>
+        <script src="plugin/fontawesome/all.min.js"></script>
+        <script src="plugin/bootstrap/bootstrap.js"></script>
+        <script src="plugin/bootstrap-table/bootstrap-table.min.js"></script>
+        <script src="plugin/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+        <script src="plugin/drag-drop-upload/jquery-simple-upload.js"></script>
+        <script src="plugin/spectrum/spectrum.js"></script>
+        <script src="js/common.js"></script>
+        <script src="js/my-account.js"></script>
+    </body>
 </html>

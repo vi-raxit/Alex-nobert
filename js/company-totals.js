@@ -1,4 +1,4 @@
-/* Tasks Javascript */
+/* Company Totals Javascript */
 jQuery( document ).ready(function($) {
     $('#start-date').datepicker({
         format: 'dd-mm-yyyy',

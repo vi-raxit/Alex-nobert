@@ -1,5 +1,5 @@
 /*
-* History Style
+* Address Book Style
 */
 .fixed-table-toolbar .bs-bars #toolbar select {
   width: 100px;
@@ -15,7 +15,7 @@
   color: #4D8943;
   font-size: 8px;
 }
-.user-icon{
+.user-icon {
   color: #556b98;
   font-size: 15px;
 }
@@ -28,13 +28,13 @@
 .text-15 {
   font-size: 15px;
 }
-.font-25{
+.font-25 {
   font-size: 25px;
 }
-.display-grid{
+.display-grid {
   display: grid !important
 }
-.d-grid{
+.d-grid {
   display: grid;
 }
 .text-16 {

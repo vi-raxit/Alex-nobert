@@ -1,4 +1,4 @@
-/* Tasks Javascript */
+/* Admin History Javascript */
 jQuery( document ).ready(function($) {
     $('#start-date').datepicker({
         format: 'dd-mm-yyyy',

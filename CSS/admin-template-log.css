@@ -19,9 +19,7 @@
   display: flex;
 }
 @media only screen and (max-width: 767px) {
-  .mb-12 {
-    margin-bottom: 12px;
-  }
+  
   .mt-12 {
     margin-top: 12px;
   }
@@ -44,5 +42,10 @@
   .flex {
     display: flex;
     align-items: baseline;
+  }
+}
+@media only screen and (max-width: 393px) {
+  .mb-12 {
+    margin-bottom: 12px;
   }
 }

@@ -11,10 +11,9 @@
     <!-- Styles -->
     <link href="plugin/bootstrap/bootstrap.css" rel="stylesheet" />
     <link href="plugin/bootstrap-table/bootstrap-table.min.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.css" rel="stylesheet">
     <link href="CSS/styles.css" rel="stylesheet" />
     <link href="CSS/responsive.css" rel="stylesheet" />
-    <link href="CSS/dashboard-users.css" rel="stylesheet" />
+    <link href="CSS/account-summary.css" rel="stylesheet" />
 </head>
 
 <body class="sidebar-fixed">
@@ -115,13 +114,15 @@
                     </div>
                     <div class="nav">
                         <a class="nav-link" href="#11">
-                            <div class="sidebar-link-icon"><img src="image/icons/Templates.png" alt="Template Log"> </div>
+                            <div class="sidebar-link-icon"><img src="image/icons/Templates.png" alt="Template Log">
+                            </div>
                             <span>Template Log</span>
                         </a>
                     </div>
                     <div class="nav">
                         <a class="nav-link" href="#12">
-                            <div class="sidebar-link-icon"><img src="image/icons/activity_log.png" alt="Activity Log"></div>
+                            <div class="sidebar-link-icon"><img src="image/icons/activity_log.png" alt="Activity Log">
+                            </div>
                             <span>Activity Log</span>
                         </a>
                     </div>
@@ -138,7 +139,8 @@
 
                     <div class="nav">
                         <a class="nav-link" href="#14">
-                            <div class="sidebar-link-icon"><img src="image/icons/admin_panel.png" alt="Admin Panel"></div>
+                            <div class="sidebar-link-icon"><img src="image/icons/admin_panel.png" alt="Admin Panel">
+                            </div>
                             <span>Admin Panel</span>
                         </a>
                     </div>
@@ -186,13 +188,13 @@
                 <nav class="sidebar-topnav shadow-sm navbar navbar-expand navbar-light box-shadow bg-light">
                     <!-- Breadcrumb-->
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html"></a>Admin Panel</a></li>
+                        <li class="breadcrumb-item"><a href="index.html"></a>My Account</a></li>
                         <span class="pl-2 pr-2">
                             <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0.589996 10.58L5.17 6L0.589996 1.41L2 0L8 6L2 12L0.589996 10.58Z" fill="black" />
                             </svg>
                         </span>
-                        <li class="breadcrumb-item active">Dashboard</li>
+                        <li class="breadcrumb-item active">Account Summary</li>
                     </ol>
                     <!-- Navbar Search-->
                     <form class="d-none hideIn-mobile d-md-inline-block form-inline ml-auto mr-0 my-2 my-md-0">
@@ -210,74 +212,43 @@
             <main class="pt-4 pb-4">
                 <!-- Page Content -->
                 <section class="container-fluid">
-                    <div class="card pb-4 min-height-100">
-                        <div class="row p-3">
-                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 pb-2">
-                                <ul class="list-group text-15">
-                                    <li class="list-group-item border-0 px-1 py-1"><strong>Company Name :</strong> SYM</li>
-                                    <li class="list-group-item border-0 px-1 py-1"><strong>Plan :</strong> Business</li>
-                                    <li class="list-group-item border-0 px-1 py-1"><strong>Plan Users :</strong> 20</li>
-                                    <li class="list-group-item border-0 px-1 py-1"><strong>Total Available Users :</strong> 20</li>
-                                    <li class="list-group-item border-0 px-1 py-1"><strong>Registered Users :</strong> 2</li>
-                                    <li class="list-group-item border-0 px-1 py-1"><strong>Available Users :</strong> 18</li>
-                                </ul>
-                            </div>
-                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 pb-2">
-                                <div class="text-center text-15"><strong>User Graph:</strong></div>
-                                <canvas id="remainingUsers" width="300" height="100"></canvas>
-                            </div>
+                    <div class="card pb-4 min-height-100 p-4">
+                        <div>
+                            <h4 class="mb-0 d-flex align-items-center">Subscription</h4>
                         </div>
-                        <div class="d-flex justify-content-end flex-wrap button-res mx-3">
-                            <button type="button" class="btn btn-light-outline btn-action mb-3 mx-1 active">Users</button>
-                            <button type="button" class="btn btn-light-outline btn-action mb-3 mx-1">Packages</button>
-                            <button type="button" class="btn btn-light-outline btn-action mb-3 mx-1">Storage</button>
-                            <button type="button" class="btn btn-light-outline btn-action mb-3 mx-1">Streaming</button>
+                        <ul class="list-group text-16">
+                            <li class="list-group-item border-0"><strong>Plan :</strong> Business</li>
+                            <li class="list-group-item border-0"><strong>Status :</strong> active</li>
+                            <li class="list-group-item border-0"><strong>Total Amount :</strong> $0.00/Year</li>
+                            <li class="list-group-item border-0"><strong>Next Invoice :</strong> Sunday, March 13,2022</li>
+                        </ul>
+                        <div class="py-4 button-res">
+                        <button type="button" class="btn btn-warning btn-action mr-2"><i class="fa fa-times-circle mr-2" aria-hidden="true"></i>cancel my subscription</button>
+                        <button type="button" class="btn btn-success btn-action"><i class="fa fa-cog mr-2" aria-hidden="true"></i>update billing info</button>
+                        </div>
+                        <div class="p-2 border-top">
+                            <h4 class="mb-0 d-flex align-items-center">Invoices</h4>
                         </div>
                         <table id="b-table" data-toggle="table" class="table borderlessTable">
                             <thead>
                                 <tr>
-                                    <th data-field="sr" data-filter-control="input">Sr #</th>
-                                    <th data-field="name" data-filter-control="input">Name</th>
-                                    <th data-field="email" data-filter-control="input">Email</th>
-                                    <th data-field="status" data-filter-control="input">Status</th>
-                                    <th data-field="accountType" data-filter-control="input">Account Type</th>
+                                    <th data-field="invoices" data-filter-control="input">Invoice #</th>
+                                    <th data-field="date" data-filter-control="input">Date</th>
+                                    <th data-field="totalDue" data-filter-control="input">Total Due</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>
-                                        <span>1</span>
+                                        <span>1132</span>
                                     </td>
                                     <td>
-                                        <span>Alex Norbert</span>
+                                       <span>Friday,March 12,2021</span>
                                     </td>
                                     <td>
-                                        <span>sendyourmedia2@gmail.com</span>
+                                        <span>$0.00</span>
                                     </td>
-                                    <td>
-                                        <span>Active</span>
-                                    </td>
-                                    <td>
-                                        <span>Admin</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span>2</span>
-                                    </td>
-                                    <td>
-                                        <span>Rakesh Patel</span>
-                                    </td>
-                                    <td>
-                                        <span>patelvinod@gmail.com</span>
-                                    </td>
-                                    <td>
-                                        <span>Active</span>
-                                    </td>
-                                    <td>
-                                        <span>Admin</span>
-                                    </td>
-                                </tr>
+                                </tr>    
                             </tbody>
                         </table>
                     </div>
@@ -293,9 +264,7 @@
     <script src="plugin/bootstrap/popper.min.js"></script>
     <script src="plugin/bootstrap/bootstrap.js"></script>
     <script src="plugin/bootstrap-table/bootstrap-table.min.js"></script>
-    <script src="plugin/chartJs/Chart.min.js"></script>
     <script src="js/common.js"></script>
-    <script src="js/dashboard-users.js"></script>
 </body>
 
 </html>

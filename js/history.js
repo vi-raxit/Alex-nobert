@@ -1,24 +1,22 @@
-// ** Create Package Upload **//
+// ** History Jquery **//
 jQuery( document ).ready(function($) {
-// Drag
- $('tbody').sortable();
-
-// checkbox select all or cancel
-$("input.select-all").click(function () {
-    var checked = this.checked;
-    $("input.select-item").each(function (index,item) {
-        item.checked = checked;
-    });
-    if(checked) {
-       $(".delete").removeClass("d-none") 
-    } else {
-       $(".delete").addClass("d-none") 
-    }
-});
+    // checkbox select all or cancel
+ $("input.select-all").click(function () {
+     var checked = this.checked;
+     $("input.select-item").each(function (index,item) {
+         item.checked = checked;
+     });
+     if(checked) {
+      $(".delete").removeClass("d-none") 
+   } else {
+      $(".delete").addClass("d-none") 
+   }
+ });
 
  //check selected items
  $("input.select-item").click(function () {
-    checkSelected();
+     var checked = this.checked;
+     checkSelected();
  });
 
  //check is all selected
@@ -33,4 +31,4 @@ $("input.select-all").click(function () {
         $(".delete").addClass("d-none")
     }
  }
- });
+  });

@@ -1,3 +1,4 @@
+// ** Dashboard Users **//
 jQuery( document ).ready(function($)
  {
     var ctx2 = document.getElementById('remainingUsers');

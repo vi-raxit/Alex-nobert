@@ -24,7 +24,8 @@
 }
 @media (min-width: 1024px) {
   .email-inbox-left {
-      min-height: 600px;
+      /* min-height: 100vh; */
+      min-height: calc(100vh - 84px);
   }
 }
 .email-inbox-left .nav-link {
@@ -50,6 +51,38 @@
   color: #E7E7E7;
   font-size: 20px;
 }
+.input-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.form-check.form-check-mb-0 {
+  margin-bottom: 0 !important;
+}
+.add-package-panel {
+  position: absolute;
+  right: 0;
+  z-index: 100;
+  min-height: calc(100vh - -100%);
+  transform: translateX(100%);
+  transition: transform 0.15s ease-in-out;
+}
+.sidepanel-toggled .add-package-panel {
+  transform: translateX(0);
+}
+.panel-heading {
+  display: flex;
+  padding: 0.6rem 1rem;
+  background: #343f54;
+  text-align: left;
+  color: #FFFFFF;
+  justify-content: space-between;
+  align-items: center;
+}
+.panel-heading a {
+  cursor: pointer;
+}
+
 /* Email Inbox Left Style End */
 
 /* Email Inbox Middle Style */
@@ -61,9 +94,9 @@
   background-color: #F7F7F7;
   border-bottom: 0;
 }
-.email-inbox-middle .list-group {
+/* .email-inbox-middle .list-group {
   padding: 20px;
-}
+} */
 .email-inbox-middle .nav-item .nav-link.active {
   background-color: #FFFFFF;
   color: #000000;
@@ -86,14 +119,16 @@
 .email-inbox-middle .list-group-item:last-child {
   border-bottom: 0;
 }
+.email-inbox-middle .list-group-item:hover,
+.email-inbox-middle .list-group-item.d-flex.selected {
+  background: #ECEEF3;
+}
 .email-inbox-middle .list-group-item {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 0;
-  padding-right: 0;
+  padding: 20px;
   border-right: 0;
   border-left: 0;
   border-radius: 0;
+  cursor: pointer;
 }
 .email-inbox-middle .tab-content .image-parent {
     margin-right: 5px;
@@ -125,9 +160,6 @@
 }
 .toolbar-icons a:hover{
   text-decoration: none;
-}
-.text-grey {
-  color: #A6A6A6;
 }
 .w-155 {
   min-width: 155px;

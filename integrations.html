@@ -12,7 +12,7 @@
         <link href="plugin/bootstrap-table/bootstrap-table.min.css" rel="stylesheet" />
         <link href="CSS/styles.css" rel="stylesheet" />
         <link href="CSS/responsive.css" rel="stylesheet" />
-        <link href="CSS/admin-template-log.css" rel="stylesheet" />
+        <link href="CSS/integrations.css" rel="stylesheet" />
     </head>
     <body class="sidebar-fixed">
         <div id="containerMain">
@@ -181,16 +181,9 @@
                     <nav class="sidebar-topnav shadow-sm navbar navbar-expand navbar-light box-shadow bg-light">
                         <!-- Breadcrumb-->
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html"></a>Admin Panel</a></li>
-                            <span class="pl-2 pr-2">
-                                <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M0.589996 10.58L5.17 6L0.589996 1.41L2 0L8 6L2 12L0.589996 10.58Z" fill="black"/>
-                                </svg>
-                            </span>
-                           <li class="breadcrumb-item active">Template Log</li>
+                            <li class="breadcrumb-item"><a href="index.html"></a>Integrations</a></li>
                         </ol>
-                    
-                        <!-- Navbar Search-->
+                       <!-- Navbar Search-->
                         <form class="d-none hideIn-mobile d-md-inline-block form-inline ml-auto mr-0 my-2 my-md-0">
                             <div class="input-group">
                                 <input class="form-control border-0 bg-light-grey" type="text" placeholder="Search..." aria-label="Search" />
@@ -206,73 +199,101 @@
                 <main class="pt-4 pb-4">
                     <!-- Page Content -->
                     <section class="container-fluid">
-                        <div class="card pb-4 min-height-100">     
-                            <!-- Table Toolbar -->
-                            <div id="toolbar" class="d-flex justify-content-end p-2">
-                                <div class="">
-                                    <div class="dropdown mr-3 mt-12 d-inline">
-                                        <button class="btn btn-select dropdown-toggle mb-12" type="button" id="filter1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            My Templates
-                                        </button>
-                                        <div class="dropdown-menu" aria-labelledby="filter1">
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 p-3">
+                                <div class="card text-center border-0 rounded-0">
+                                    <div class="card-body">
+                                        <img class="width-100" src="image/exchange.png" />
+                                        <h5 class="card-title my-4">Exchange</h5>
+                                        <p class="card-text">SendYourMedia will email packages usind your office 365 account.Youe emails will also appear in the sent folder of your email client.</p>
+                                        <a href="#" class="btn btn-success">Connect</a>
                                     </div>
-                                    <div class="dropdown d-inline">
-                                        <button class="btn btn-select dropdown-toggle" type="button" id="filter2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            All Records
-                                        </button>
-                                        <div class="dropdown-menu" aria-labelledby="filter2">
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="refreshTable refresh-d"><button class="bg-transparent btn btn-sm">
-                                    <img src="image/icons/refresh-datatable.png" alt="Refersh Table" /></button>
                                 </div>
                             </div>
-                            <!-- Table Toolbar End -->
-                            <table 
-                                id="b-table" 
-                                data-toggle="table" 
-                                data-filter-control="true" 
-                                class="table borderlessTable">
-                                <thead>
-                                    <tr>
-                                        <th data-field="templaetName" data-filter-control="input">Template Name</th>
-                                        <th data-field="folder" data-filter-control="select">Folder</th>
-                                        <th data-field="totalUses" data-filter-control="select">Total Uses</th>
-                                        <th data-field="emailOpenRate">Email Open Rate</th>
-                                        <th data-field="packageOpenRate">Package Open Rate</th>
-                                        <th data-field="sharing">Sharing</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>First Touch <small class="text-muted">(Created by: Alex Norbert)</small></td>
-                                        <td>John Doe</td>
-                                        <td>1</td>
-                                        <td>100%</td>
-                                        <td>100%</td>
-                                        <td>
-                                            <div class="dropdown">
-                                                <button class="btn btn-select dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    Share It
-                                                </button>
-                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                    <a class="dropdown-item" href="#">Action</a>
-                                                    <a class="dropdown-item" href="#">Another action</a>
-                                                    <a class="dropdown-item" href="#">Something else here</a>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 p-3">
+                                <div class="card text-center border-0 rounded-0">
+                                    <div class="card-body">
+                                        <img class="width-100" src="image/office.png" />
+                                        <h5 class="card-title my-4">Office 365</h5>
+                                        <p class="card-text">SendYourMedia will email packages usind your office 365 account.Youe emails will also appear in the sent folder of your email client.</p>
+                                        <a href="#" class="btn btn-success">Connect</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 p-3">
+                                <div class="card text-center border-0 rounded-0">
+                                    <div class="card-body">
+                                        <img class="width-100" src="image/mail.png" />
+                                        <h5 class="card-title my-4">Gmail</h5>
+                                        <p class="card-text">SendYourMedia will email packages usind your office 365 account.Youe emails will also appear in the sent folder of your email client.</p>
+                                        <a href="#" class="btn btn-success">Connect</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 p-3">
+                                <div class="card text-center border-0 rounded-0">
+                                    <div class="card-body">
+                                        <div class="bg-facebook width-100 m-auto">
+                                            <img class="img-facebook" src="image/facebook.png" />
+                                        </div>
+                                        <h5 class="card-title my-4">Facebook</h5>
+                                        <p class="card-text">SendYourMedia will email packages usind your office 365 account.Youe emails will also appear in the sent folder of your email client.</p>
+                                        <a href="#" class="btn btn-success">Connect</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 p-3">
+                                <div class="card text-center border-0 rounded-0">
+                                    <div class="card-body">
+                                        <img class="width-100 bg-twitter" src="image/twitter.png" />
+                                        <h5 class="card-title my-4">Twitter</h5>
+                                        <p class="card-text">SendYourMedia will email packages usind your office 365 account.Youe emails will also appear in the sent folder of your email client.</p>
+                                        <a href="#" class="btn btn-success">Connect</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 p-3">
+                                <div class="card text-center border-0 rounded-0">
+                                    <div class="card-body">
+                                        <div class="width-100 bg-in m-auto">
+                                            <img class="img-in" src="image/in.png" />
+                                        </div>
+                                        <h5 class="card-title my-4">LinkedIn</h5>
+                                        <p class="card-text">SendYourMedia will email packages usind your office 365 account.Youe emails will also appear in the sent folder of your email client.</p>
+                                        <a href="#" class="btn btn-success">Connect</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 p-3">
+                                <div class="card text-center border-0 rounded-0">
+                                    <div class="card-body">
+                                        <div class="width-100 bg-salesforce m-auto">
+                                            <img class="img-salesforce" src="image/salesforce.png" />
+                                        </div>
+                                        <h5 class="card-title my-4">Salesforce</h5>
+                                        <p class="card-text">SendYourMedia will email packages usind your office 365 account.Youe emails will also appear in the sent folder of your email client.</p>
+                                        <a href="#" class="btn btn-success">Connect</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 p-3">
+                                <div class="card text-center border-0 rounded-0">
+                                    <div class="card-body">
+                                        <div class="bg-zapier m-auto">
+                                            <img class="img-ziper" src="image/zapier.png" />
+                                        </div>
+                                        <h5 class="card-title my-4">Zapier</h5>
+                                        <p class="card-text">SendYourMedia will email packages usind your office 365 account.Youe emails will also appear in the sent folder of your email client.</p>
+                                        <a href="#" class="btn btn-light">Disconnect</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </section>
                     <!-- Page Content End-->
@@ -286,5 +307,6 @@
         <script src="plugin/bootstrap/bootstrap.js"></script>
         <script src="plugin/bootstrap-table/bootstrap-table.min.js"></script>
         <script src="js/common.js"></script>
+        <script src="js/integrations.js"></script>
     </body>
 </html>

@@ -10,8 +10,10 @@
         <!-- Styles -->
         <link href="plugin/bootstrap/bootstrap.css" rel="stylesheet" />
         <link href="plugin/bootstrap-table/bootstrap-table.min.css" rel="stylesheet" >
+        <link href="plugin/bootstrap-datepicker/bootstrap-datepicker.css" rel="stylesheet" />
         <link href="CSS/styles.css" rel="stylesheet" />
         <link href="CSS/responsive.css" rel="stylesheet" />
+        <link href="CSS/email-packages.css" rel="stylesheet" />
         <link href="CSS/email-inbox.css" rel="stylesheet" />
     </head>
     <body class="sidebar-fixed">
@@ -202,12 +204,12 @@
                     <section>
                         <div class="container-inner">
                             <div class="row container-inner-resp">
-                                <!-- Email Inbox Left -->
-                                <div class="col-6 bg-light col-sm-2 col-md-2 col-lg-2 col-xl-2 bg-light border-right email-inbox-left">
+                                <!-- Add Inbox Left -->
+                                <div class="col-6 bg-light full-height col-sm-2 col-md-2 col-lg-2 col-xl-2 bg-light border-right email-inbox-left">
                                     <div class="email-inbox-left-inner collapse show bg-light pt-2 pl-0">
                                         <ul class="nav flex-column flex-nowrap overflow-hidden">
-                                            <li class="nav-item">
-                                                <button class="btn btn-success btn-action d-sm-inline text-truncate mb-3">New Email</button>
+                                            <li class="">
+                                                <button class="btn btn-success btn-action d-sm-inline text-truncate mb-3" type="button" class="btn btn-action btn-success" data-toggle="modal" data-target=".new-email-modal">New Email</button>
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link collapsed text-truncate" href="#submenu1" data-toggle="collapse" data-target="#submenu1"><i class="fa fa-angle-right collapseMenuIcon"></i> <span class="d-sm-inline">Inbox</span></a>
@@ -246,12 +248,12 @@
                                           <div class="tab-content" id="myTabContent">
                                             <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
                                                 <ul class="list-group">
-                                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                    <li class="list-group-item selected d-flex justify-content-between align-items-center">
                                                         <div class="image-parent">
                                                             <img src="image/plceholder-profile-pic.png" class="img-fluid" alt="profile1">
                                                         </div>
                                                         <div class="d-inline-block">
-                                                            <span class="d-inline-block w-100">Skype</span>
+                                                            <span class="d-inline-block w-100">Alex Norbert</span>
                                                             <span class="d-inline-block w-100"><b>Support ticket 1234</b></span>
                                                             <span class="d-inline-block w-100">The issue your reported</span>
                                                         </div>
@@ -329,8 +331,8 @@
 
                                 <!-- Email Inbox Right -->  
                                 <div class="col-12 bg-table-grey col-sm-12 col-md-6 col-lg-6 col-xl-7 email-inbox-right">
-                                    <div class="row">
-                                        <div class="bg-light p-4 d-flex justify-content-between border-bottom w-100">
+                                    <div class="bg-light full-height mt-3 mb-3">
+                                        <div class="p-4 d-flex justify-content-between border-bottom w-100">
                                             <div class="emailTopBar">
                                                 <div class="profile-image">
                                                     <img src="image/plceholder-profile-pic.png" class="img-fluid" alt="profile1">
@@ -403,6 +405,386 @@
                                 <!-- Email Inbox Right End -->
                             </div>
                         </div>
+
+                        <!-- New Email popup -->
+                        <div class="modal fade new-email-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+
+                            <!-- Add Package Panel -->
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 pt-0 bg-light border-right search-package-left add-package-panel">
+                                <div class="panel-heading">
+                                    <h4>Select Packages</h4>
+                                    <a hre="#" class="sidepanelToggle">
+                                        <svg width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.986 13L5.126 8.512L2.376 13H0.286L4.18 7.016L0.286 0.943999H2.552L5.412 5.41L8.14 0.943999H10.23L6.358 6.906L10.252 13H7.986Z" fill="white"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="pt-3 pl-15 pr-15">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="searchForPackage" aria-describedby="searchForPackage" placeholder="Search for a Package...">
+                                    </div>
+                                    <div class="form-group">
+                                        <div id="expiration-date" class="input-daterange position-relative">
+                                            <input type="text" id="expirationDate" class="form-control text-left" placeholder="Expiration Date">
+                                            <svg id="fa-1" class="icon-calendar" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6 9V11H4V9H6ZM10 9V11H8V9H10ZM14 9V11H12V9H14ZM16 2C16.5304 2 17.0391 2.21071 17.4142 2.58579C17.7893 2.96086 18 3.46957 18 4V18C18 18.5304 17.7893 19.0391 17.4142 19.4142C17.0391 19.7893 16.5304 20 16 20H2C0.89 20 0 19.1 0 18V4C0 3.46957 0.210714 2.96086 0.585786 2.58579C0.960859 2.21071 1.46957 2 2 2H3V0H5V2H13V0H15V2H16ZM16 18V7H2V18H16ZM6 13V15H4V13H6ZM10 13V15H8V13H10ZM14 13V15H12V13H14Z" fill="#606262"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="form-check text-right">
+                                        <input class="form-check-input" type="checkbox" value="">
+                                        <label class="form-check-label" for="neverExpires">
+                                            Never Expires
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="package-left-table">
+                                    <ul class="nav flex-column flex-nowrap overflow-hidden">
+                                        <li class="nav-item d-block position-relative justify-content-between align-items-center">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="">
+                                                    </div>
+                                                    <span class="ml-2">
+                                                        <a class="nav-link collapsed text-truncate" href="#subtitle1" data-toggle="collapse" data-target="#subtitle1">
+                                                            <svg class="arrow-up-svg" width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M0 10L5 5L0 0V10Z" fill="#666666"/>
+                                                            </svg>
+                                                            <svg class="arrow-down-svg" width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M0 -4.37114e-07L5 5L10 0L0 -4.37114e-07Z" fill="#666666"/>
+                                                            </svg>
+                                                        </a>
+                                                    </span>
+                                                    <span class="mr-2 d-flex">
+                                                    <span class="filledBox"></span>
+                                                    </span>
+                                                    <span>Subtitle 1</span>
+                                                </div>
+                                                <span class="d-flex justify-content-end mr-3">
+                                                    <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M0 10H18V8H0V10ZM0 14H18V12H0V14ZM0 6H18V4H0V6ZM0 0V2H18V0H0Z" fill="#606262"/>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </li>  
+                                        <li class="nav-item d-block position-relative justify-content-between align-items-center">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="">
+                                                    </div>
+                                                    <span class="ml-2">
+                                                        <a class="nav-link collapsed text-truncate" href="#subtitle2" data-toggle="collapse" data-target="#subtitle2">
+                                                            <svg class="arrow-up-svg" width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M0 10L5 5L0 0V10Z" fill="#666666"/>
+                                                            </svg>
+                                                            <svg class="arrow-down-svg" width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M0 -4.37114e-07L5 5L10 0L0 -4.37114e-07Z" fill="#666666"/>
+                                                            </svg>
+                                                        </a>
+                                                    </span>
+                                                    <span class="mr-2 d-flex">
+                                                    <span class="filledBox"></span>
+                                                    </span>
+                                                    <span>Subtitle 2</span>
+                                                </div>
+                                                <span class="d-flex justify-content-end mr-2">
+                                                    <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M0 10H18V8H0V10ZM0 14H18V12H0V14ZM0 6H18V4H0V6ZM0 0V2H18V0H0Z" fill="#606262"/>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </li>  
+                                        <li class="nav-item d-block position-relative justify-content-between align-items-center">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="">
+                                                    </div>
+                                                    <span class="ml-2">
+                                                        <a class="nav-link collapsed text-truncate" href="#subtitle3" data-toggle="collapse" data-target="#subtitle3">
+                                                            <svg class="arrow-up-svg" width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M0 10L5 5L0 0V10Z" fill="#666666"/>
+                                                            </svg>
+                                                            <svg class="arrow-down-svg" width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M0 -4.37114e-07L5 5L10 0L0 -4.37114e-07Z" fill="#666666"/>
+                                                            </svg>
+                                                        </a>
+                                                    </span>
+                                                    <span class="mr-2 d-flex">
+                                                    <span class="filledBox"></span>
+                                                    </span>
+                                                    <span>Subtitle 3</span>
+                                                </div>
+                                                <span class="d-flex justify-content-end mr-2">
+                                                    <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M0 10H18V8H0V10ZM0 14H18V12H0V14ZM0 6H18V4H0V6ZM0 0V2H18V0H0Z" fill="#606262"/>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                            
+                                            <div class="collapse" id="subtitle3" aria-expanded="false">
+                                                <ul class="flex-column pl-2 nav collapse-submenu">
+                                                    <li class="nav-item">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" value="">
+                                                            </div>
+                                                            <span class="ml-35">
+                                                                <a class="nav-link collapsed text-truncate" href="#videos" data-toggle="collapse" data-target="#videos">
+                                                                    <svg class="arrow-up-svg" width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M0 10L5 5L0 0V10Z" fill="#666666"/>
+                                                                    </svg>
+                                                                    <svg class="arrow-down-svg" width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M0 -4.37114e-07L5 5L10 0L0 -4.37114e-07Z" fill="#666666"/>
+                                                                    </svg>
+                                                                </a>
+                                                            </span>
+                                                            <div>
+                                                                <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M14.75 15.5H2C1.60218 15.5 1.22064 15.342 0.93934 15.0607C0.658035 14.7794 0.5 14.3978 0.5 14V2C0.5 1.60218 0.658035 1.22064 0.93934 0.93934C1.22064 0.658035 1.60218 0.5 2 0.5H14.75C15.1478 0.5 15.5294 0.658035 15.8107 0.93934C16.092 1.22064 16.25 1.60218 16.25 2V5.045L20.315 2.1425C20.4269 2.0628 20.5586 2.01538 20.6957 2.00543C20.8327 1.99547 20.9699 2.02336 21.0922 2.08605C21.2144 2.14874 21.3171 2.24382 21.3891 2.3609C21.461 2.47799 21.4994 2.61259 21.5 2.75V13.25C21.4994 13.3874 21.461 13.522 21.3891 13.6391C21.3171 13.7562 21.2144 13.8513 21.0922 13.9139C20.9699 13.9766 20.8327 14.0045 20.6957 13.9946C20.5586 13.9846 20.4269 13.9372 20.315 13.8575L16.25 10.955V14C16.25 14.3978 16.092 14.7794 15.8107 15.0607C15.5294 15.342 15.1478 15.5 14.75 15.5ZM2 2V14H14.75V9.5C14.7506 9.36259 14.789 9.22799 14.8609 9.1109C14.9329 8.99382 15.0356 8.89874 15.1578 8.83605C15.2801 8.77336 15.4173 8.74547 15.5543 8.75543C15.6914 8.76538 15.8231 8.8128 15.935 8.8925L20 11.795V4.205L15.935 7.1075C15.8231 7.1872 15.6914 7.23462 15.5543 7.24457C15.4173 7.25453 15.2801 7.22664 15.1578 7.16395C15.0356 7.10126 14.9329 7.00618 14.8609 6.8891C14.789 6.77201 14.7506 6.63741 14.75 6.5V2H2Z" fill="black"/>
+                                                                </svg>
+                                                            <span>Videos</span>     
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" value="">
+                                                            </div>
+                                                            <span class="ml-35">
+                                                                <a class="nav-link collapsed text-truncate" href="#audio" data-toggle="collapse" data-target="#audio">
+                                                                    <svg class="arrow-up-svg" width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M0 10L5 5L0 0V10Z" fill="#666666"/>
+                                                                    </svg>
+                                                                    <svg class="arrow-down-svg" width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M0 -4.37114e-07L5 5L10 0L0 -4.37114e-07Z" fill="#666666"/>
+                                                                    </svg>
+                                                                </a>
+                                                            </span>
+                                                            <div>
+                                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M21.75 23.25C21.5795 23.25 21.4142 23.1918 21.2812 23.085L17.7375 20.25H15C14.8011 20.25 14.6103 20.171 14.4697 20.0304C14.329 19.8897 14.25 19.6989 14.25 19.5V15.75C14.25 15.5511 14.329 15.3604 14.4697 15.2197C14.6103 15.079 14.8011 15 15 15H17.7375L21.282 12.165C21.3923 12.077 21.5252 12.0218 21.6654 12.0059C21.8056 11.99 21.9475 12.0139 22.0747 12.075C22.2019 12.1361 22.3093 12.2319 22.3846 12.3513C22.4598 12.4707 22.4998 12.6089 22.5 12.75V22.5C22.5 22.6989 22.421 22.8897 22.2803 23.0304C22.1397 23.171 21.9489 23.25 21.75 23.25ZM15.75 18.75H18C18.1705 18.7502 18.3358 18.8084 18.4688 18.915L21 20.94V14.31L18.468 16.335C18.3352 16.4415 18.1702 16.4997 18 16.5H15.75V18.75Z" fill="black"/>
+                                                                    <path d="M12 21H6V3.00001H12V7.50001C12.0012 7.89747 12.1596 8.27831 12.4407 8.55936C12.7217 8.84041 13.1025 8.99882 13.5 9.00001H18V11.25H19.5V7.50001C19.5026 7.40144 19.4839 7.30347 19.4451 7.21284C19.4062 7.12221 19.3482 7.04107 19.275 6.97501L14.025 1.72501C13.959 1.65177 13.8778 1.59372 13.7872 1.55488C13.6966 1.51603 13.5986 1.49731 13.5 1.50001H6C5.60254 1.5012 5.2217 1.65961 4.94065 1.94066C4.6596 2.22171 4.50119 2.60255 4.5 3.00001V21C4.50119 21.3975 4.6596 21.7783 4.94065 22.0594C5.2217 22.3404 5.60254 22.4988 6 22.5H12V21ZM13.5 3.30001L17.7 7.50001H13.5V3.30001Z" fill="black"/>
+                                                                </svg>
+                                                            <span>Audio</span>     
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" value="">
+                                                            </div>
+                                                            <span class="ml-35">
+                                                                <a class="nav-link collapsed text-truncate" href="#images" data-toggle="collapse" data-target="#images">
+                                                                    <svg class="arrow-up-svg" width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M0 10L5 5L0 0V10Z" fill="#666666"/>
+                                                                    </svg>
+                                                                    <svg class="arrow-down-svg" width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M0 -4.37114e-07L5 5L10 0L0 -4.37114e-07Z" fill="#666666"/>
+                                                                    </svg>
+                                                                </a>
+                                                            </span>
+                                                            <div>
+                                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M14.25 10.5C14.695 10.5 15.13 10.368 15.5 10.1208C15.87 9.87357 16.1584 9.52217 16.3287 9.11104C16.499 8.69991 16.5436 8.24751 16.4568 7.81105C16.37 7.37459 16.1557 6.97368 15.841 6.65901C15.5263 6.34434 15.1254 6.13005 14.689 6.04323C14.2525 5.95642 13.8001 6.00097 13.389 6.17127C12.9778 6.34157 12.6264 6.62996 12.3792 6.99997C12.132 7.36998 12 7.80499 12 8.25C12 8.84674 12.2371 9.41903 12.659 9.84099C13.081 10.2629 13.6533 10.5 14.25 10.5ZM14.25 7.5C14.3983 7.5 14.5433 7.54399 14.6667 7.6264C14.79 7.70881 14.8861 7.82594 14.9429 7.96299C14.9997 8.10003 15.0145 8.25083 14.9856 8.39632C14.9567 8.54181 14.8852 8.67544 14.7803 8.78033C14.6754 8.88522 14.5418 8.95665 14.3963 8.98559C14.2508 9.01453 14.1 8.99968 13.963 8.94291C13.8259 8.88615 13.7088 8.79002 13.6264 8.66668C13.544 8.54334 13.5 8.39834 13.5 8.25C13.5 8.05109 13.579 7.86032 13.7197 7.71967C13.8603 7.57902 14.0511 7.5 14.25 7.5Z" fill="black"/>
+                                                                    <path d="M19.5 3H4.5C4.10218 3 3.72064 3.15804 3.43934 3.43934C3.15804 3.72064 3 4.10218 3 4.5V19.5C3 19.8978 3.15804 20.2794 3.43934 20.5607C3.72064 20.842 4.10218 21 4.5 21H19.5C19.8978 21 20.2794 20.842 20.5607 20.5607C20.842 20.2794 21 19.8978 21 19.5V4.5C21 4.10218 20.842 3.72064 20.5607 3.43934C20.2794 3.15804 19.8978 3 19.5 3ZM19.5 19.5H4.5V15L8.25 11.25L12.4425 15.4425C12.7235 15.7219 13.1037 15.8787 13.5 15.8787C13.8963 15.8787 14.2765 15.7219 14.5575 15.4425L15.75 14.25L19.5 18V19.5ZM19.5 15.8775L16.8075 13.185C16.5265 12.9056 16.1463 12.7488 15.75 12.7488C15.3537 12.7488 14.9735 12.9056 14.6925 13.185L13.5 14.3775L9.3075 10.185C9.02646 9.90562 8.64628 9.74881 8.25 9.74881C7.85372 9.74881 7.47354 9.90562 7.1925 10.185L4.5 12.8775V4.5H19.5V15.8775Z" fill="black"/>
+                                                                </svg>
+                                                                <span>Images</span>     
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" value="">
+                                                            </div>
+                                                            <span class="ml-35">
+                                                                <a class="nav-link collapsed text-truncate" href="#documents" data-toggle="collapse" data-target="#documents">
+                                                                    <svg class="arrow-up-svg" width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M0 10L5 5L0 0V10Z" fill="#666666"/>
+                                                                    </svg>
+                                                                    <svg class="arrow-down-svg" width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M0 -4.37114e-07L5 5L10 0L0 -4.37114e-07Z" fill="#666666"/>
+                                                                    </svg>
+                                                                </a>
+                                                            </span>
+                                                            <div>
+                                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M19.275 6.975L14.025 1.725C13.875 1.575 13.725 1.5 13.5 1.5H6C5.175 1.5 4.5 2.175 4.5 3V21C4.5 21.825 5.175 22.5 6 22.5H18C18.825 22.5 19.5 21.825 19.5 21V7.5C19.5 7.275 19.425 7.125 19.275 6.975ZM13.5 3.3L17.7 7.5H13.5V3.3ZM18 21H6V3H12V7.5C12 8.325 12.675 9 13.5 9H18V21Z" fill="black"/>
+                                                                    <path d="M7.5 16.5H16.5V18H7.5V16.5Z" fill="black"/>
+                                                                    <path d="M7.5 12H16.5V13.5H7.5V12Z" fill="black"/>
+                                                                </svg>
+                                                                <span>Documents</span>     
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" value="">
+                                                            </div>
+                                                            <span class="ml-35">
+                                                                <a class="nav-link collapsed text-truncate" href="#download" data-toggle="collapse" data-target="#download">
+                                                                    <svg class="arrow-up-svg" width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M0 10L5 5L0 0V10Z" fill="#666666"/>
+                                                                    </svg>
+                                                                    <svg class="arrow-down-svg" width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M0 -4.37114e-07L5 5L10 0L0 -4.37114e-07Z" fill="#666666"/>
+                                                                    </svg>
+                                                                </a>
+                                                            </span>
+                                                            <div>
+                                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M19.5 18V21H4.5V18H3V21C3 21.3978 3.15804 21.7794 3.43934 22.0607C3.72064 22.342 4.10218 22.5 4.5 22.5H19.5C19.8978 22.5 20.2794 22.342 20.5607 22.0607C20.842 21.7794 21 21.3978 21 21V18H19.5Z" fill="black"/>
+                                                                    <path d="M19.5 10.5L18.4425 9.4425L12.75 15.1275V1.5H11.25V15.1275L5.5575 9.4425L4.5 10.5L12 18L19.5 10.5Z" fill="black"/>
+                                                                    </svg>
+                                                                    
+                                                            <span>Download</span>     
+                                                            </div>
+                                                        </div>  
+                                                        <div class="collapse" id="download" aria-expanded="false">
+                                                            <ul class="flex-column nav collapse-child-submenu">
+                                                                <li class="nav-item d-flex align-items-center pt-2">
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="checkbox" value="">
+                                                                    </div>
+                                                                    <span class="ml-110">New File</span>
+                                                                </li>
+                                                                <li class="nav-item d-flex align-items-center pt-2">
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="checkbox" value="">
+                                                                    </div>
+                                                                    <span class="ml-110">Old File</span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>       
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- Add Package Panel End -->
+
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h2 class="modal-title" id="myLargeModalLabel">New Email</h2>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <svg width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7.986 13L5.126 8.512L2.376 13H0.286L4.18 7.016L0.286 0.943999H2.552L5.412 5.41L8.14 0.943999H10.23L6.358 6.906L10.252 13H7.986Z" fill="white"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                                <div class="form-group position-relative">
+                                                    <input type="text" class="form-control rounded-0" id="to" aria-describedby="to" placeholder="To">
+                                                    <a class="input-btn text-black" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                                        Cc/Bcc
+                                                    </a>
+                                                </div>
+                                                <div class="collapse" id="collapseExample">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control rounded-0" id="cc" aria-describedby="cc" placeholder="Cc">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control rounded-0" id="bcc" aria-describedby="bcc" placeholder="Bcc">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group position-relative">
+                                                    <input type="text" class="form-control rounded-0" id="subject" aria-describedby="subject" placeholder="Subject">
+                                                    <a class="input-btn"href="#">Insert Template</a>
+                                                </div>
+                                                <div class="form-group">
+                                                    <textarea class="form-control rounded-0" id="message" rows="18" placeholder="Type your message..."></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                                <div class="d-flex justify-content-between">
+                                                    <a href="" class="sidepanelToggle d-flex align-items-center pb-3 pt-1">
+                                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M23.5028 4.79309C23.4974 4.46654 23.2905 4.17459 22.9859 4.06379L12.4093 0.18084C12.2268 0.11384 12.0261 0.11649 11.8454 0.18829L0.994382 4.50309C0.704232 4.61789 0.496582 4.90504 0.496582 5.23674V17.0306C0.496582 17.3155 0.649882 17.5782 0.897932 17.7182L11.6119 23.7655C11.6158 23.7677 11.6199 23.7692 11.6238 23.7713C11.6359 23.7773 11.6481 23.783 11.6603 23.7888C11.8898 23.8978 12.1289 23.8894 12.3386 23.7893C12.3512 23.7834 12.3636 23.7775 12.3761 23.7713C12.3802 23.7694 12.3843 23.7677 12.3882 23.7655L23.1021 17.7182C23.3501 17.5782 23.5036 17.3155 23.5036 17.0306C23.5035 2.95969 23.5028 4.99894 23.5028 4.79309ZM12.1484 1.76724L20.7142 4.91189L17.4774 6.51054L9.17738 2.94864L12.1484 1.76724ZM11.9856 9.22289L3.30298 5.28454L6.96533 3.82834L15.3403 7.56604L11.9856 9.22289ZM21.9243 16.5697L12.7896 21.7256V10.5872L16.3105 8.84814V13.0537L18.3826 12.0175V7.82474L21.9243 6.07554V16.5697Z" fill="#5E9331"/>
+                                                        </svg>
+                                                        <span class="ml-2">Add Package</span>
+                                                    </a>
+                                                    
+                                                    <div class="form-check">
+                                                        <span class="d-inline-block mr-4">{ }</span>
+                                                        <input class="form-check-input" type="checkbox" value="" id="addSign">
+                                                        <label class="form-check-label" for="addSign">
+                                                            Add Signature
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="emailOpened">
+                                                    <label class="form-check-label" for="emailOpened">
+                                                        Email me when package is opened
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="bccMe">
+                                                    <label class="form-check-label" for="bccMe">
+                                                        Bcc me
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="noLogo">
+                                                    <label class="form-check-label" for="noLogo">
+                                                        Do not show company logo
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="emailOpened1">
+                                                    <label class="form-check-label" for="emailOpened1">
+                                                        Email me when package is opened
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="requirePassword">
+                                                    <label class="form-check-label" for="requirePassword">
+                                                        Require password:
+                                                    </label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" id="searchForPackage1" aria-describedby="searchForPackage1" placeholder="Search for a Package...">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-7">
+                                                <div class="d-flex justify-content-between align-items-center w-100 mt-4">
+                                                <span>1 Package added</span>
+                                                <div class="form-check form-check-mb-0 display-inline">
+                                                    <input class="form-check-input" type="checkbox" value="" id="neverExires">
+                                                    <label class="form-check-label" for="neverExires">
+                                                        Never Expires
+                                                    </label>
+                                                </div>
+                                                <button class="btn btn-action btn-light">Expiration</button>
+                                            </div>
+                                            </div>
+                                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-5">
+                                                <div class="d-block w-100 mt-4 text-right">
+                                                    <button class="btn btn-action btn-light">Cancel</button>
+                                                    <button class="btn btn-action btn-light ml-2">Schedule</button>
+                                                    <button class="btn btn-action btn-success ml-2">Send</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </section>
                     <!-- Page Content End-->
                 </main>  
@@ -413,6 +795,7 @@
         <script src="plugin/fontawesome/all.min.js"></script>
         <script src="plugin/bootstrap/bootstrap.js"></script>
         <script src="plugin/bootstrap-table/bootstrap-table.min.js"></script>
+        <script src="plugin/bootstrap-datepicker/bootstrap-datepicker.js"></script>
         <script src="js/common.js"></script>
         <script src="js/email-inbox.js"></script>
     </body>

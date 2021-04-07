@@ -327,7 +327,11 @@ input.form-control {
   margin-bottom: 0.8rem;
 }
 .form-group input,
-.form-control input {
+.form-group input,
+.form-control select,
+select.form-control,
+select.form-group,
+.form-group select {
   margin-bottom: 0.8rem;
   padding-bottom: 0.7rem;
   padding-top: 0.7rem;
@@ -342,9 +346,9 @@ input.form-control {
 select.form-control:not([size]):not([multiple]) {
   height: calc(2.78rem + 2px);
 }
-.form-control.select-main {
+/* .form-control.select-main {
   color: #464343;
-}
+} */
 select.form-control {
   font-size: 14px;
 }
@@ -405,6 +409,9 @@ select.form-control {
 option:disabled {
   color: #6c7581;
 }
+.text-black {
+  color: #000000 !important;
+}
 .text-light {
   color: #FFFFFF !important;
 }
@@ -416,6 +423,12 @@ option:disabled {
 }
 .text-warning {
   color: #BA0D0D !important;
+}
+.text-grey {
+  color: #A6A6A6;
+}
+.text-12 {
+  font-size: 12px;
 }
 .text-13 {
   font-size: 13px;
@@ -452,6 +465,19 @@ option:disabled {
   background: #5E9331;
   color: #FFF;
   padding: 1px 0px 0 4px;
+}
+.full-height {
+  min-height: calc(100vh - 84px);
+}
+.dropZone {
+  width: 100%;
+  min-height: 120px;
+  background: #ffffff;
+  border: 2px solid #E0E0E0;
+  border-style: dashed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /* The container */
 .checkbox-circle {
@@ -594,14 +620,18 @@ thead {
 /* Modal Style */
 .modal-content {
   background-color: #edeff3;
+  border: none;
 }
 .modal-header {
   background: #343f54;
   text-align: center;
   color: #FFFFFF;
 }
+.modal-header .close {
+ opacity: 1;
+}
 .modal-header h2 {
-  text-align: center;
+  text-align: left;
   width: 100%;
 }
 .modal-header button span {
