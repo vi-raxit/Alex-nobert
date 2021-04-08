@@ -520,8 +520,13 @@ div.sp-container {
     padding: 20px;
 }
 .sp-picker-container {
-    width: 205px;
+    width: 100%;
     border-left: none;
+}
+div.sp-container.sp-flat {
+    position: relative;
+    width: 100%;
+    display: inline-block;
 }
 div.sp-container button,
 .sp-container button:active,
